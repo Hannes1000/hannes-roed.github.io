@@ -29,6 +29,12 @@ npm run build
 
 The production build is emitted to `dist/`.
 
+For the current GitHub Pages branch-root setup, publish the built files into the repository root with:
+
+```bash
+npm run publish:root
+```
+
 ## Deploy to GitHub Pages
 
 1. Push this repository to GitHub.
@@ -37,6 +43,8 @@ The production build is emitted to `dist/`.
 4. Push to `main`, or manually run the `Deploy portfolio to GitHub Pages` workflow.
 
 The workflow in `.github/workflows/deploy.yml` installs dependencies, builds the site, uploads `dist`, and publishes it through GitHub Pages.
+
+If GitHub Pages is configured to deploy from the `main` branch root instead of GitHub Actions, run `npm run publish:root`, commit the generated root `index.html`, `assets/`, and copied public files, then push.
 
 ## Deploy to Vercel
 
