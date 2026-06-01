@@ -42,7 +42,7 @@ export const profile = {
   email: 'your.email@example.com',
   github: 'https://github.com/your-github',
   linkedin: 'https://www.linkedin.com/in/your-linkedin',
-  cvUrl: '/cv-hannes-roed.pdf',
+  cvUrl: './cv-hannes-roed.pdf',
   intro:
     'Computer Science graduate building interactive systems at the intersection of software engineering, artificial intelligence, simulation, and games.',
   bio:
