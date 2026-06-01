@@ -1,0 +1,8 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <circle cx="1010" cy="110" r="190" fill="#14b8a6" fill-opacity=".18"/>
+  <circle cx="170" cy="560" r="220" fill="#f59e0b" fill-opacity=".16"/>
+  <text x="88" y="225" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="800">Hannes Röd</text>
+  <text x="92" y="305" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700">Software Engineer | AI Enthusiast | Game Developer</text>
+  <text x="92" y="390" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="30">Interactive systems, speech technology, simulation, and games.</text>
+</svg>
