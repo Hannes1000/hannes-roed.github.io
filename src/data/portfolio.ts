@@ -105,55 +105,55 @@ export const projects: Project[] = [
     artifactLabel: 'Open thesis',
     images: [
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/1_sandbox_instruction.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/1_sandbox_instruction.jpg', import.meta.url).href,
         alt: 'Speech-controlled LEGO sandbox instruction screen',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/2_VoiceProductionAndWaveForm_1.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/2_VoiceProductionAndWaveForm_1.jpg', import.meta.url).href,
         alt: 'Voice production and waveform illustration from the bachelor thesis',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/3.0_TimeDomainWithTranscription_2.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/3.0_TimeDomainWithTranscription_2.jpg', import.meta.url).href,
         alt: 'Time-domain audio view with transcription from the bachelor thesis',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/3.1_windowing_3.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/3.1_windowing_3.jpg', import.meta.url).href,
         alt: 'Audio windowing illustration from the bachelor thesis',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/4_WER_3.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/4_WER_3.jpg', import.meta.url).href,
         alt: 'Word error rate explanation from the bachelor thesis',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/5_WER_vs_RTFx_lego.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/5_WER_vs_RTFx_lego.jpg', import.meta.url).href,
         alt: 'WER versus real-time factor chart for LEGO command recognition',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/6_sandbox_tasks.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/6_sandbox_tasks.jpg', import.meta.url).href,
         alt: 'Sandbox task overview from the speech-controlled LEGO prototype',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/7_sandbox_tutorial.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/7_sandbox_tutorial.jpg', import.meta.url).href,
         alt: 'Sandbox tutorial screen from the speech-controlled LEGO prototype',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/8_sandbox_task3.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/8_sandbox_task3.jpg', import.meta.url).href,
         alt: 'Speech-controlled LEGO sandbox task screenshot',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/9_hypothesized_words_accross_model_family.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/9_hypothesized_words_accross_model_family.jpg', import.meta.url).href,
         alt: 'Hypothesized words across ASR model families chart',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/10_results.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/10_results.jpg', import.meta.url).href,
         alt: 'Evaluation results from the bachelor thesis speech recognition study',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/11_results.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/11_results.jpg', import.meta.url).href,
         alt: 'Additional evaluation results from the bachelor thesis',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/12_results.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/12_results.jpg', import.meta.url).href,
         alt: 'Final evaluation results from the bachelor thesis',
       },
     ],
@@ -168,35 +168,35 @@ export const projects: Project[] = [
     liveUrl: 'http://3.72.107.197/',
     images: [
       {
-        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/1.0.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/1.0.jpg', import.meta.url).href,
         alt: 'Franz Foto Archiv login screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/1.1.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/1.1.jpg', import.meta.url).href,
         alt: 'Franz Foto Archiv alternate login screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/2.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/2.jpg', import.meta.url).href,
         alt: 'Franz Foto Archiv gallery overview screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/4.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/4.jpg', import.meta.url).href,
         alt: 'Franz Foto Archiv image detail screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/5.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/5.jpg', import.meta.url).href,
         alt: 'Franz Foto Archiv album view screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/6.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/6.jpg', import.meta.url).href,
         alt: 'Franz Foto Archiv archive view screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/7.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/7.jpg', import.meta.url).href,
         alt: 'Franz Foto Archiv management view screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/8.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/8.jpg', import.meta.url).href,
         alt: 'Franz Foto Archiv final workflow screenshot',
       },
     ],
@@ -210,19 +210,19 @@ export const projects: Project[] = [
     sourceUrl: 'https://github.com/Hannes1000/GemueseShop',
     images: [
       {
-        url: new URL('../../ressources/projects_highschool/fruit-shop/1.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/fruit-shop/1.jpg', import.meta.url).href,
         alt: 'Fruit Shop home page screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/fruit-shop/2.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/fruit-shop/2.jpg', import.meta.url).href,
         alt: 'Fruit Shop product listing screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/fruit-shop/3.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/fruit-shop/3.jpg', import.meta.url).href,
         alt: 'Fruit Shop cart workflow screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/fruit-shop/4.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/fruit-shop/4.jpg', import.meta.url).href,
         alt: 'Fruit Shop checkout-style page screenshot',
       },
     ],
@@ -236,11 +236,11 @@ export const projects: Project[] = [
     sourceUrl: 'https://github.com/4BT-TP-19-20/QuiSepp/tree/master',
     images: [
       {
-        url: new URL('../../ressources/projects_highschool/quisepp/create_quiz_example.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/quisepp/create_quiz_example.jpg', import.meta.url).href,
         alt: 'QuiSepp quiz creation screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/quisepp/quiz_example.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/quisepp/quiz_example.jpg', import.meta.url).href,
         alt: 'QuiSepp quiz player screenshot',
       },
     ],
@@ -253,27 +253,27 @@ export const projects: Project[] = [
     technologies: ['Networking', 'SNMP', 'Monitoring', 'Tooling'],
     images: [
       {
-        url: new URL('../../ressources/projects_highschool/snmp-tool/1.1.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/snmp-tool/1.1.jpg', import.meta.url).href,
         alt: 'SNMP Tool overview screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/snmp-tool/1.2.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/snmp-tool/1.2.jpg', import.meta.url).href,
         alt: 'SNMP Tool alternate overview screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/snmp-tool/2.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/snmp-tool/2.jpg', import.meta.url).href,
         alt: 'SNMP Tool device information screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/snmp-tool/3.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/snmp-tool/3.jpg', import.meta.url).href,
         alt: 'SNMP Tool monitoring screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/snmp-tool/4.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/snmp-tool/4.jpg', import.meta.url).href,
         alt: 'SNMP Tool network data screenshot',
       },
       {
-        url: new URL('../../ressources/projects_highschool/snmp-tool/5.png', import.meta.url).href,
+        url: new URL('../../ressources/projects_highschool/snmp-tool/5.jpg', import.meta.url).href,
         alt: 'SNMP Tool final network data screenshot',
       },
     ],

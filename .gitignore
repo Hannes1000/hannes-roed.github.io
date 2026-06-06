@@ -4,3 +4,5 @@ dist
 .env.local
 .DS_Store
 *.log
+ressources/projects_bachelor/**/*.png
+ressources/projects_highschool/**/*.png
