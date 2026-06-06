@@ -343,11 +343,11 @@ function ProjectSlideshow({ project }: { project: Project }) {
 
   return (
     <div className={`mb-6 overflow-hidden rounded-lg bg-gradient-to-br ${project.accent} p-1`}>
-      <div className="relative aspect-video overflow-hidden rounded-md bg-ink-950/10">
+      <div className="relative aspect-video overflow-hidden rounded-md bg-white/85 p-3 dark:bg-ink-950/60">
         <img
           src={activeImage.url}
           alt={activeImage.alt}
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+          className="h-full w-full object-contain"
           loading="lazy"
         />
         {hasMultipleImages && (
