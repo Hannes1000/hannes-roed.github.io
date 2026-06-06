@@ -3,6 +3,8 @@ import {
   ArrowUpRight,
   BriefcaseBusiness,
   CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
   Download,
   ExternalLink,
   Github,
@@ -26,6 +28,7 @@ import {
   projects,
   skillGroups,
   structuredData,
+  type Project,
   type TimelineItem,
 } from './data/portfolio';
 
@@ -285,12 +288,7 @@ function Projects() {
       <div className="grid gap-6 lg:grid-cols-2">
         {projects.map((project) => (
           <article key={project.title} className="project-card group">
-            <div className={`mb-6 aspect-video rounded-lg bg-gradient-to-br ${project.accent} p-5 text-white`}>
-              <div className="flex h-full flex-col justify-between rounded-lg border border-white/20 bg-black/10 p-4 backdrop-blur-[2px]">
-                <span className="w-fit rounded-lg bg-white/20 px-3 py-2 text-sm font-semibold">Screenshot placeholder</span>
-                <span className="text-2xl font-black leading-tight">{project.title}</span>
-              </div>
-            </div>
+            <ProjectSlideshow project={project} />
             <div className="flex items-start justify-between gap-4">
               <h3 className="text-2xl font-black tracking-normal">{project.title}</h3>
               <ArrowUpRight className="h-6 w-6 flex-none text-accent-600 transition group-hover:translate-x-1 group-hover:-translate-y-1 dark:text-accent-400" />
@@ -303,14 +301,93 @@ function Projects() {
                 </span>
               ))}
             </div>
-            <a href={project.githubUrl} className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-accent-700 hover:text-accent-600 dark:text-accent-400" target="_blank" rel="noreferrer">
-              <Github className="h-4 w-4" />
-              GitHub placeholder
-            </a>
+            <div className="mt-6 flex flex-wrap gap-4">
+              {project.sourceUrl && (
+                <a href={project.sourceUrl} className="project-link" target="_blank" rel="noreferrer">
+                  <Github className="h-4 w-4" />
+                  Source
+                </a>
+              )}
+              {project.liveUrl && (
+                <a href={project.liveUrl} className="project-link" target="_blank" rel="noreferrer">
+                  <ExternalLink className="h-4 w-4" />
+                  Live demo
+                </a>
+              )}
+              {project.artifactUrl && (
+                <a href={project.artifactUrl} className="project-link" target="_blank" rel="noreferrer">
+                  <ExternalLink className="h-4 w-4" />
+                  {project.artifactLabel ?? 'Open project'}
+                </a>
+              )}
+            </div>
           </article>
         ))}
       </div>
     </Section>
+  );
+}
+
+function ProjectSlideshow({ project }: { project: Project }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const hasMultipleImages = project.images.length > 1;
+  const activeImage = project.images[activeIndex];
+
+  const showPrevious = () => {
+    setActiveIndex((current) => (current === 0 ? project.images.length - 1 : current - 1));
+  };
+
+  const showNext = () => {
+    setActiveIndex((current) => (current + 1) % project.images.length);
+  };
+
+  return (
+    <div className={`mb-6 overflow-hidden rounded-lg bg-gradient-to-br ${project.accent} p-1`}>
+      <div className="relative aspect-video overflow-hidden rounded-md bg-ink-950/10">
+        <img
+          src={activeImage.url}
+          alt={activeImage.alt}
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+          loading="lazy"
+        />
+        {hasMultipleImages && (
+          <>
+            <button
+              type="button"
+              className="slideshow-button left-3"
+              aria-label={`Show previous image for ${project.title}`}
+              title="Previous image"
+              onClick={showPrevious}
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              className="slideshow-button right-3"
+              aria-label={`Show next image for ${project.title}`}
+              title="Next image"
+              onClick={showNext}
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+            <div className="absolute inset-x-0 bottom-3 flex justify-center gap-1.5">
+              {project.images.map((image, index) => (
+                <button
+                  key={image.url}
+                  type="button"
+                  className={`h-2 rounded-full transition ${
+                    index === activeIndex ? 'w-6 bg-white' : 'w-2 bg-white/55 hover:bg-white/80'
+                  }`}
+                  aria-label={`Show image ${index + 1} for ${project.title}`}
+                  title={`Image ${index + 1}`}
+                  onClick={() => setActiveIndex(index)}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </div>
   );
 }
 

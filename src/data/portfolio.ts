@@ -23,7 +23,14 @@ export type Project = {
   title: string;
   description: string;
   technologies: string[];
-  githubUrl: string;
+  sourceUrl?: string;
+  liveUrl?: string;
+  artifactUrl?: string;
+  artifactLabel?: string;
+  images: {
+    url: string;
+    alt: string;
+  }[];
   accent: string;
 };
 
@@ -90,44 +97,131 @@ export const skillGroups: SkillGroup[] = [
 
 export const projects: Project[] = [
   {
-    title: 'Speech-Controlled LEGO Sandbox',
+    title: 'Bachelor Thesis: Speech-Controlled LEGO Sandbox',
     description:
-      'A Unity-based sandbox where players construct LEGO models using speech commands. Includes logging systems, user studies, and speech recognition integration.',
-    technologies: ['Unity', 'C#', 'Speech Recognition', 'UX Research', 'Logging'],
-    githubUrl: 'https://github.com/your-github/speech-lego-sandbox',
+      'A Unity sandbox for building LEGO-style models with speech commands, including ASR evaluation, interaction tasks, logging, and user-facing prototype work.',
+    technologies: ['Unity', 'C#', 'Speech Recognition', 'ASR', 'UX Research'],
+    artifactUrl: new URL('../../ressources/projects_bachelor/bachelor_thesis/_ba_hannes_roed_thesis.pdf', import.meta.url).href,
+    artifactLabel: 'Open thesis',
+    images: [
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/10_results.png', import.meta.url).href,
+        alt: 'Evaluation results from the bachelor thesis speech recognition study',
+      },
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/6_sandbox_tasks.png', import.meta.url).href,
+        alt: 'Sandbox task overview from the speech-controlled LEGO prototype',
+      },
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/8_sandbox_task3.png', import.meta.url).href,
+        alt: 'Speech-controlled LEGO sandbox task screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/5_WER_vs_RTFx_lego.png', import.meta.url).href,
+        alt: 'WER versus real-time factor chart for LEGO command recognition',
+      },
+    ],
     accent: 'from-teal-500 to-cyan-500',
   },
   {
-    title: 'ASR Benchmarking Thesis',
+    title: 'Franz Foto Archiv',
     description:
-      'Evaluation and benchmarking of Automatic Speech Recognition systems using metrics such as Word Error Rate and Real-Time Factor.',
-    technologies: ['Python', 'ASR', 'WER', 'Benchmarking', 'Research'],
-    githubUrl: 'https://github.com/your-github/asr-benchmarking',
+      'A hosted photo archive web app with user accounts and a gallery workflow, built as a larger school project around organizing and browsing image collections.',
+    technologies: ['Web App', 'Authentication', 'Image Archive', 'Database'],
+    sourceUrl: 'https://github.com/Hannes1000/Foto-Archiv',
+    liveUrl: 'http://3.72.107.197/',
+    images: [
+      {
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/1.0.png', import.meta.url).href,
+        alt: 'Franz Foto Archiv login screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/2.png', import.meta.url).href,
+        alt: 'Franz Foto Archiv gallery overview screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/4.png', import.meta.url).href,
+        alt: 'Franz Foto Archiv image detail screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/7.png', import.meta.url).href,
+        alt: 'Franz Foto Archiv management view screenshot',
+      },
+    ],
     accent: 'from-amber-500 to-orange-500',
   },
   {
-    title: '2D Fluid Simulation',
+    title: 'Fruit Shop',
     description:
-      'Implementation of Euler fluid simulation including Semi-Lagrangian advection, pressure solving, velocity projection, and multigrid methods.',
-    technologies: ['C++', 'Numerical Methods', 'Simulation', 'Multigrid', 'Visualization'],
-    githubUrl: 'https://github.com/your-github/2d-fluid-simulation',
+      'A small online shop prototype for browsing fruit and vegetable products, practicing classic shop pages, product presentation, and checkout-style flows.',
+    technologies: ['Web Shop', 'Product UI', 'Frontend', 'School Project'],
+    sourceUrl: 'https://github.com/Hannes1000/GemueseShop',
+    images: [
+      {
+        url: new URL('../../ressources/projects_highschool/fruit-shop/1.png', import.meta.url).href,
+        alt: 'Fruit Shop home page screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/fruit-shop/2.png', import.meta.url).href,
+        alt: 'Fruit Shop product listing screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/fruit-shop/3.png', import.meta.url).href,
+        alt: 'Fruit Shop cart workflow screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/fruit-shop/4.png', import.meta.url).href,
+        alt: 'Fruit Shop checkout-style page screenshot',
+      },
+    ],
+    accent: 'from-lime-500 to-emerald-500',
+  },
+  {
+    title: 'QuiSepp',
+    description:
+      'A quiz application for creating and playing question sets, including a creator flow and a player-facing quiz view for classroom-style learning.',
+    technologies: ['Quiz App', 'Frontend', 'Team Project', 'Education'],
+    sourceUrl: 'https://github.com/4BT-TP-19-20/QuiSepp/tree/master',
+    images: [
+      {
+        url: new URL('../../ressources/projects_highschool/quisepp/quiz_example.png', import.meta.url).href,
+        alt: 'QuiSepp quiz player screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/quisepp/create_quiz_example.png', import.meta.url).href,
+        alt: 'QuiSepp quiz creation screenshot',
+      },
+    ],
     accent: 'from-sky-500 to-blue-500',
   },
   {
-    title: 'Physics-Based LEGO Construction Game',
+    title: 'SNMP Tool',
     description:
-      'A physically accurate LEGO-inspired game focusing on creative building, structural stability, and simulation-driven gameplay.',
-    technologies: ['Unity', 'C#', 'Physics', 'Game Design', 'Optimization'],
-    githubUrl: 'https://github.com/your-github/physics-lego-game',
+      'A school networking tool for reading and displaying SNMP device information, focused on making network monitoring data easier to inspect.',
+    technologies: ['Networking', 'SNMP', 'Monitoring', 'Tooling'],
+    images: [
+      {
+        url: new URL('../../ressources/projects_highschool/snmp-tool/1.1.png', import.meta.url).href,
+        alt: 'SNMP Tool overview screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/snmp-tool/1.2.png', import.meta.url).href,
+        alt: 'SNMP Tool alternate overview screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/snmp-tool/2.png', import.meta.url).href,
+        alt: 'SNMP Tool device information screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/snmp-tool/3.png', import.meta.url).href,
+        alt: 'SNMP Tool monitoring screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/snmp-tool/4.png', import.meta.url).href,
+        alt: 'SNMP Tool network data screenshot',
+      },
+    ],
     accent: 'from-rose-500 to-red-500',
-  },
-  {
-    title: 'Tyrolean Dialect TTS Research',
-    description:
-      'Exploration of text-to-speech systems for Tyrolean and South Tyrolean dialects, with attention to low-resource speech technology workflows.',
-    technologies: ['Python', 'TTS', 'Speech Synthesis', 'Linguistics', 'ML'],
-    githubUrl: 'https://github.com/your-github/tyrolean-tts',
-    accent: 'from-violet-500 to-fuchsia-500',
   },
 ];
 
