@@ -251,6 +251,7 @@ export const projects: Project[] = [
     description:
       'A school networking tool for reading and displaying SNMP device information, focused on making network monitoring data easier to inspect.',
     technologies: ['Networking', 'SNMP', 'Monitoring', 'Tooling'],
+    sourceUrl: 'https://github.com/Hannes1000/SNMPTool',
     images: [
       {
         url: new URL('../../ressources/projects_highschool/snmp-tool/1.1.jpg', import.meta.url).href,
