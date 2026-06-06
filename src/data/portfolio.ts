@@ -105,20 +105,56 @@ export const projects: Project[] = [
     artifactLabel: 'Open thesis',
     images: [
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/10_results.png', import.meta.url).href,
-        alt: 'Evaluation results from the bachelor thesis speech recognition study',
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/1_sandbox_instruction.png', import.meta.url).href,
+        alt: 'Speech-controlled LEGO sandbox instruction screen',
+      },
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/2_VoiceProductionAndWaveForm_1.png', import.meta.url).href,
+        alt: 'Voice production and waveform illustration from the bachelor thesis',
+      },
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/3.0_TimeDomainWithTranscription_2.png', import.meta.url).href,
+        alt: 'Time-domain audio view with transcription from the bachelor thesis',
+      },
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/3.1_windowing_3.png', import.meta.url).href,
+        alt: 'Audio windowing illustration from the bachelor thesis',
+      },
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/4_WER_3.png', import.meta.url).href,
+        alt: 'Word error rate explanation from the bachelor thesis',
+      },
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/5_WER_vs_RTFx_lego.png', import.meta.url).href,
+        alt: 'WER versus real-time factor chart for LEGO command recognition',
       },
       {
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/6_sandbox_tasks.png', import.meta.url).href,
         alt: 'Sandbox task overview from the speech-controlled LEGO prototype',
       },
       {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/7_sandbox_tutorial.png', import.meta.url).href,
+        alt: 'Sandbox tutorial screen from the speech-controlled LEGO prototype',
+      },
+      {
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/8_sandbox_task3.png', import.meta.url).href,
         alt: 'Speech-controlled LEGO sandbox task screenshot',
       },
       {
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/5_WER_vs_RTFx_lego.png', import.meta.url).href,
-        alt: 'WER versus real-time factor chart for LEGO command recognition',
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/9_hypothesized_words_accross_model_family.png', import.meta.url).href,
+        alt: 'Hypothesized words across ASR model families chart',
+      },
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/10_results.png', import.meta.url).href,
+        alt: 'Evaluation results from the bachelor thesis speech recognition study',
+      },
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/11_results.png', import.meta.url).href,
+        alt: 'Additional evaluation results from the bachelor thesis',
+      },
+      {
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/12_results.png', import.meta.url).href,
+        alt: 'Final evaluation results from the bachelor thesis',
       },
     ],
     accent: 'from-teal-500 to-cyan-500',
@@ -136,6 +172,10 @@ export const projects: Project[] = [
         alt: 'Franz Foto Archiv login screenshot',
       },
       {
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/1.1.png', import.meta.url).href,
+        alt: 'Franz Foto Archiv alternate login screenshot',
+      },
+      {
         url: new URL('../../ressources/projects_highschool/franz-foto-archiv/2.png', import.meta.url).href,
         alt: 'Franz Foto Archiv gallery overview screenshot',
       },
@@ -144,8 +184,20 @@ export const projects: Project[] = [
         alt: 'Franz Foto Archiv image detail screenshot',
       },
       {
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/5.png', import.meta.url).href,
+        alt: 'Franz Foto Archiv album view screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/6.png', import.meta.url).href,
+        alt: 'Franz Foto Archiv archive view screenshot',
+      },
+      {
         url: new URL('../../ressources/projects_highschool/franz-foto-archiv/7.png', import.meta.url).href,
         alt: 'Franz Foto Archiv management view screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/franz-foto-archiv/8.png', import.meta.url).href,
+        alt: 'Franz Foto Archiv final workflow screenshot',
       },
     ],
     accent: 'from-amber-500 to-orange-500',
@@ -184,12 +236,12 @@ export const projects: Project[] = [
     sourceUrl: 'https://github.com/4BT-TP-19-20/QuiSepp/tree/master',
     images: [
       {
-        url: new URL('../../ressources/projects_highschool/quisepp/quiz_example.png', import.meta.url).href,
-        alt: 'QuiSepp quiz player screenshot',
-      },
-      {
         url: new URL('../../ressources/projects_highschool/quisepp/create_quiz_example.png', import.meta.url).href,
         alt: 'QuiSepp quiz creation screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/quisepp/quiz_example.png', import.meta.url).href,
+        alt: 'QuiSepp quiz player screenshot',
       },
     ],
     accent: 'from-sky-500 to-blue-500',
@@ -219,6 +271,10 @@ export const projects: Project[] = [
       {
         url: new URL('../../ressources/projects_highschool/snmp-tool/4.png', import.meta.url).href,
         alt: 'SNMP Tool network data screenshot',
+      },
+      {
+        url: new URL('../../ressources/projects_highschool/snmp-tool/5.png', import.meta.url).href,
+        alt: 'SNMP Tool final network data screenshot',
       },
     ],
     accent: 'from-rose-500 to-red-500',
