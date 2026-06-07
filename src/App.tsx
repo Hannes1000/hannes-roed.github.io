@@ -320,6 +320,12 @@ function Projects() {
                   {project.artifactLabel ?? 'Open project'}
                 </a>
               )}
+              {project.artifacts?.map((artifact) => (
+                <a key={artifact.url} href={artifact.url} className="project-link" target="_blank" rel="noreferrer">
+                  <ExternalLink className="h-4 w-4" />
+                  {artifact.label}
+                </a>
+              ))}
             </div>
           </article>
         ))}

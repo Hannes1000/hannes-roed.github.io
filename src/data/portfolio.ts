@@ -27,6 +27,10 @@ export type Project = {
   liveUrl?: string;
   artifactUrl?: string;
   artifactLabel?: string;
+  artifacts?: {
+    label: string;
+    url: string;
+  }[];
   images: {
     url: string;
     alt: string;
@@ -101,8 +105,16 @@ export const projects: Project[] = [
     description:
       'A Unity sandbox for building LEGO-style models with speech commands, including ASR evaluation, interaction tasks, logging, and user-facing prototype work.',
     technologies: ['Unity', 'C#', 'Speech Recognition', 'ASR', 'UX Research'],
-    artifactUrl: new URL('../../ressources/projects_bachelor/bachelor_thesis/_ba_hannes_roed_thesis.pdf', import.meta.url).href,
-    artifactLabel: 'Open thesis',
+    artifacts: [
+      {
+        label: 'Open thesis',
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/_ba_hannes_roed_thesis.pdf', import.meta.url).href,
+      },
+      {
+        label: 'Open presentation',
+        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/_ba_hannes_roed_final_presentation.pdf', import.meta.url).href,
+      },
+    ],
     images: [
       {
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/1_sandbox_instruction.jpg', import.meta.url).href,
