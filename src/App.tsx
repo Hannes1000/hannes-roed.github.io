@@ -40,14 +40,14 @@ type Theme = 'light' | 'dark';
 function getInitialLanguage(): Language {
   const stored = localStorage.getItem('language') as Language | null;
   if (stored && languageOptions.includes(stored)) return stored;
-  return navigator.language.toLowerCase().startsWith('de') ? 'de' : 'en';
+  return 'de';
 }
 
 function App() {
   const [theme, setTheme] = useState<Theme>(() => {
     const stored = localStorage.getItem('theme') as Theme | null;
     if (stored) return stored;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'light';
   });
   const [language, setLanguage] = useState<Language>(getInitialLanguage);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
