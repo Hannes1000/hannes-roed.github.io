@@ -213,13 +213,17 @@ function Hero() {
                   <span className="h-3 w-3 rounded-full bg-accent-400" />
                 </div>
                 <div className="animate-float">
-                  <div className="mx-auto grid h-44 w-44 place-items-center rounded-full border border-white/30 bg-white/10 text-5xl font-black shadow-2xl backdrop-blur">
-                    HR
+                  <div className="mx-auto h-48 w-48 overflow-hidden rounded-full border border-white/30 bg-white/10 shadow-2xl backdrop-blur">
+                    <img
+                      src={profile.imageUrl}
+                      alt={`${profile.name} profile portrait`}
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                 </div>
                 <div>
                   <p className="text-2xl font-black">{profile.name}</p>
-                  <p className="mt-2 text-sm leading-6 text-white/80">Replace this block with a profile photo when ready.</p>
+                  <p className="mt-2 text-sm leading-6 text-white/80">Software engineering, AI, simulation, and interactive systems.</p>
                 </div>
               </div>
             </div>

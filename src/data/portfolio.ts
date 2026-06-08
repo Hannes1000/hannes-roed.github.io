@@ -54,6 +54,7 @@ export const profile = {
   github: 'https://github.com/your-github',
   linkedin: 'https://www.linkedin.com/in/your-linkedin',
   cvUrl: './cv-hannes-roed.pdf',
+  imageUrl: new URL('../../ressources/profile_picture.png', import.meta.url).href,
   intro:
     'Computer Science graduate building interactive systems at the intersection of software engineering, artificial intelligence, simulation, and games.',
   bio:
