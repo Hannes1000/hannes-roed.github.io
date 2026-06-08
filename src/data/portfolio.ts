@@ -108,11 +108,11 @@ export const projects: Project[] = [
     artifacts: [
       {
         label: 'Open thesis',
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/_ba_hannes_roed_thesis.pdf', import.meta.url).href,
+        url: './bachelor-thesis-hannes-roed.pdf',
       },
       {
         label: 'Open presentation',
-        url: new URL('../../ressources/projects_bachelor/bachelor_thesis/_ba_hannes_roed_final_presentation.pdf', import.meta.url).href,
+        url: './bachelor-presentation-hannes-roed.pdf',
       },
     ],
     images: [
