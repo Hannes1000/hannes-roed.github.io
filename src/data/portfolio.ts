@@ -13,376 +13,270 @@ import {
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
+export type SkillGroupId = 'programming' | 'gameDevelopment' | 'aiMachineLearning' | 'softwareEngineering';
+export type ProjectId = 'bachelorThesis' | 'franzFotoArchiv' | 'fruitShop' | 'quisepp' | 'snmpTool';
+export type ExperienceId = 'internship' | 'studentDeveloper' | 'researchCollaboration';
+export type EducationId = 'bachelorComputerScience' | 'futureCredential';
+export type BlogPostId = 'speechInterfaces' | 'simulationSystems' | 'learningNext';
+export type ContactLinkId = 'email' | 'github' | 'linkedin' | 'location';
+
 export type SkillGroup = {
-  title: string;
+  id: SkillGroupId;
   icon: LucideIcon;
-  skills: string[];
+};
+
+export type ProjectImage = {
+  id: string;
+  url: string;
+};
+
+export type ProjectArtifact = {
+  id: string;
+  url: string;
 };
 
 export type Project = {
-  title: string;
-  description: string;
+  id: ProjectId;
   technologies: string[];
   sourceUrl?: string;
   liveUrl?: string;
-  artifactUrl?: string;
-  artifactLabel?: string;
-  artifacts?: {
-    label: string;
-    url: string;
-  }[];
-  images: {
-    url: string;
-    alt: string;
-  }[];
+  artifacts?: ProjectArtifact[];
+  images: ProjectImage[];
   accent: string;
 };
 
-export type TimelineItem = {
-  title: string;
-  organization: string;
-  period: string;
-  description: string;
-  tags: string[];
+export type TimelineItem<TId extends string> = {
+  id: TId;
 };
 
-export const profile = {
-  name: 'Hannes Röd',
-  title: 'Software Engineer | AI Enthusiast | Game Developer',
-  location: 'Innsbruck, Austria',
-  email: 'your.email@example.com',
-  github: 'https://github.com/your-github',
-  linkedin: 'https://www.linkedin.com/in/your-linkedin',
+export type BlogPost = {
+  id: BlogPostId;
+  icon: LucideIcon;
+};
+
+export type ContactLink = {
+  id: ContactLinkId;
+  href: string;
+  icon: LucideIcon;
+};
+
+export const profileAssets = {
   cvUrl: './cv-hannes-roed.pdf',
   imageUrl: new URL('../../ressources/profile_picture.png', import.meta.url).href,
-  intro:
-    'Computer Science graduate building interactive systems at the intersection of software engineering, artificial intelligence, simulation, and games.',
-  bio:
-    'I hold a Bachelor’s degree in Computer Science from the University of Innsbruck and focus on software that feels interactive, robust, and technically ambitious. My interests span artificial intelligence, speech recognition, machine learning, game development, and simulation. I enjoy turning complex systems into usable experiences, whether that means integrating speech commands into a Unity sandbox, evaluating ASR systems, or implementing physics and fluid simulation techniques.',
 };
 
-export const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
-  { label: 'Contact', href: '#contact' },
-];
-
-export const highlights = [
-  { label: 'Degree', value: 'BSc Computer Science' },
-  { label: 'Focus', value: 'AI, Simulation, Games' },
-  { label: 'Tools', value: 'C++, C#, Python, Unity' },
-];
-
 export const skillGroups: SkillGroup[] = [
-  {
-    title: 'Programming',
-    icon: Code2,
-    skills: ['C++', 'C#', 'Python', 'JavaScript', 'TypeScript'],
-  },
-  {
-    title: 'Game Development',
-    icon: Gamepad2,
-    skills: ['Unity', 'Physics Simulation', 'Procedural Systems', 'Performance Optimization'],
-  },
-  {
-    title: 'AI & Machine Learning',
-    icon: Brain,
-    skills: ['Speech Recognition', 'Deep Learning', 'Neural Networks', 'Computer Vision', 'Natural Language Processing'],
-  },
-  {
-    title: 'Software Engineering',
-    icon: Wrench,
-    skills: ['Git', 'GitHub', 'Object-Oriented Design', 'Design Patterns', 'Testing'],
-  },
+  { id: 'programming', icon: Code2 },
+  { id: 'gameDevelopment', icon: Gamepad2 },
+  { id: 'aiMachineLearning', icon: Brain },
+  { id: 'softwareEngineering', icon: Wrench },
 ];
 
 export const projects: Project[] = [
   {
-    title: 'Bachelor Thesis: Speech-Controlled LEGO Sandbox',
-    description:
-      'A Unity sandbox for building LEGO-style models with speech commands, including ASR evaluation, interaction tasks, logging, and user-facing prototype work.',
+    id: 'bachelorThesis',
     technologies: ['Unity', 'C#', 'Speech Recognition', 'ASR', 'UX Research'],
     artifacts: [
       {
-        label: 'Open thesis',
+        id: 'thesis',
         url: './bachelor-thesis-hannes-roed.pdf',
       },
       {
-        label: 'Open presentation',
+        id: 'presentation',
         url: './bachelor-presentation-hannes-roed.pdf',
       },
     ],
     images: [
       {
+        id: 'sandboxInstruction',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/1_sandbox_instruction.jpg', import.meta.url).href,
-        alt: 'Speech-controlled LEGO sandbox instruction screen',
       },
       {
+        id: 'voiceProduction',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/2_VoiceProductionAndWaveForm_1.jpg', import.meta.url).href,
-        alt: 'Voice production and waveform illustration from the bachelor thesis',
       },
       {
+        id: 'timeDomain',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/3.0_TimeDomainWithTranscription_2.jpg', import.meta.url).href,
-        alt: 'Time-domain audio view with transcription from the bachelor thesis',
       },
       {
+        id: 'windowing',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/3.1_windowing_3.jpg', import.meta.url).href,
-        alt: 'Audio windowing illustration from the bachelor thesis',
       },
       {
+        id: 'wer',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/4_WER_3.jpg', import.meta.url).href,
-        alt: 'Word error rate explanation from the bachelor thesis',
       },
       {
+        id: 'werRtf',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/5_WER_vs_RTFx_lego.jpg', import.meta.url).href,
-        alt: 'WER versus real-time factor chart for LEGO command recognition',
       },
       {
+        id: 'sandboxTasks',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/6_sandbox_tasks.jpg', import.meta.url).href,
-        alt: 'Sandbox task overview from the speech-controlled LEGO prototype',
       },
       {
+        id: 'sandboxTutorial',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/7_sandbox_tutorial.jpg', import.meta.url).href,
-        alt: 'Sandbox tutorial screen from the speech-controlled LEGO prototype',
       },
       {
+        id: 'sandboxTask3',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/8_sandbox_task3.jpg', import.meta.url).href,
-        alt: 'Speech-controlled LEGO sandbox task screenshot',
       },
       {
+        id: 'hypothesizedWords',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/9_hypothesized_words_accross_model_family.jpg', import.meta.url).href,
-        alt: 'Hypothesized words across ASR model families chart',
       },
       {
+        id: 'results10',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/10_results.jpg', import.meta.url).href,
-        alt: 'Evaluation results from the bachelor thesis speech recognition study',
       },
       {
+        id: 'results11',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/11_results.jpg', import.meta.url).href,
-        alt: 'Additional evaluation results from the bachelor thesis',
       },
       {
+        id: 'results12',
         url: new URL('../../ressources/projects_bachelor/bachelor_thesis/12_results.jpg', import.meta.url).href,
-        alt: 'Final evaluation results from the bachelor thesis',
       },
     ],
     accent: 'from-teal-500 to-cyan-500',
   },
   {
-    title: 'Franz Foto Archiv',
-    description:
-      'A hosted photo archive web app with user accounts and a gallery workflow, built as a larger school project around organizing and browsing image collections.',
+    id: 'franzFotoArchiv',
     technologies: ['Web App', 'Authentication', 'Image Archive', 'Database'],
     sourceUrl: 'https://github.com/Hannes1000/Foto-Archiv',
     liveUrl: 'http://3.72.107.197/',
     images: [
       {
+        id: 'login',
         url: new URL('../../ressources/projects_highschool/franz-foto-archiv/1.0.jpg', import.meta.url).href,
-        alt: 'Franz Foto Archiv login screenshot',
       },
       {
+        id: 'alternateLogin',
         url: new URL('../../ressources/projects_highschool/franz-foto-archiv/1.1.jpg', import.meta.url).href,
-        alt: 'Franz Foto Archiv alternate login screenshot',
       },
       {
+        id: 'gallery',
         url: new URL('../../ressources/projects_highschool/franz-foto-archiv/2.jpg', import.meta.url).href,
-        alt: 'Franz Foto Archiv gallery overview screenshot',
       },
       {
+        id: 'imageDetail',
         url: new URL('../../ressources/projects_highschool/franz-foto-archiv/4.jpg', import.meta.url).href,
-        alt: 'Franz Foto Archiv image detail screenshot',
       },
       {
+        id: 'album',
         url: new URL('../../ressources/projects_highschool/franz-foto-archiv/5.jpg', import.meta.url).href,
-        alt: 'Franz Foto Archiv album view screenshot',
       },
       {
+        id: 'archive',
         url: new URL('../../ressources/projects_highschool/franz-foto-archiv/6.jpg', import.meta.url).href,
-        alt: 'Franz Foto Archiv archive view screenshot',
       },
       {
+        id: 'management',
         url: new URL('../../ressources/projects_highschool/franz-foto-archiv/7.jpg', import.meta.url).href,
-        alt: 'Franz Foto Archiv management view screenshot',
       },
       {
+        id: 'workflow',
         url: new URL('../../ressources/projects_highschool/franz-foto-archiv/8.jpg', import.meta.url).href,
-        alt: 'Franz Foto Archiv final workflow screenshot',
       },
     ],
     accent: 'from-amber-500 to-orange-500',
   },
   {
-    title: 'Fruit Shop',
-    description:
-      'A small online shop prototype for browsing fruit and vegetable products, practicing classic shop pages, product presentation, and checkout-style flows.',
+    id: 'fruitShop',
     technologies: ['Web Shop', 'Product UI', 'Frontend', 'School Project'],
     sourceUrl: 'https://github.com/Hannes1000/GemueseShop',
     images: [
       {
+        id: 'home',
         url: new URL('../../ressources/projects_highschool/fruit-shop/1.jpg', import.meta.url).href,
-        alt: 'Fruit Shop home page screenshot',
       },
       {
+        id: 'products',
         url: new URL('../../ressources/projects_highschool/fruit-shop/2.jpg', import.meta.url).href,
-        alt: 'Fruit Shop product listing screenshot',
       },
       {
+        id: 'cart',
         url: new URL('../../ressources/projects_highschool/fruit-shop/3.jpg', import.meta.url).href,
-        alt: 'Fruit Shop cart workflow screenshot',
       },
       {
+        id: 'checkout',
         url: new URL('../../ressources/projects_highschool/fruit-shop/4.jpg', import.meta.url).href,
-        alt: 'Fruit Shop checkout-style page screenshot',
       },
     ],
     accent: 'from-lime-500 to-emerald-500',
   },
   {
-    title: 'QuiSepp',
-    description:
-      'A quiz application for creating and playing question sets, including a creator flow and a player-facing quiz view for classroom-style learning.',
+    id: 'quisepp',
     technologies: ['Quiz App', 'Frontend', 'Team Project', 'Education'],
     sourceUrl: 'https://github.com/4BT-TP-19-20/QuiSepp/tree/master',
     images: [
       {
+        id: 'createQuiz',
         url: new URL('../../ressources/projects_highschool/quisepp/create_quiz_example.jpg', import.meta.url).href,
-        alt: 'QuiSepp quiz creation screenshot',
       },
       {
+        id: 'playQuiz',
         url: new URL('../../ressources/projects_highschool/quisepp/quiz_example.jpg', import.meta.url).href,
-        alt: 'QuiSepp quiz player screenshot',
       },
     ],
     accent: 'from-sky-500 to-blue-500',
   },
   {
-    title: 'SNMP Tool',
-    description:
-      'A school networking tool for reading and displaying SNMP device information, focused on making network monitoring data easier to inspect.',
+    id: 'snmpTool',
     technologies: ['Networking', 'SNMP', 'Monitoring', 'Tooling'],
     sourceUrl: 'https://github.com/Hannes1000/SNMPTool',
     images: [
       {
+        id: 'overview',
         url: new URL('../../ressources/projects_highschool/snmp-tool/1.1.jpg', import.meta.url).href,
-        alt: 'SNMP Tool overview screenshot',
       },
       {
+        id: 'alternateOverview',
         url: new URL('../../ressources/projects_highschool/snmp-tool/1.2.jpg', import.meta.url).href,
-        alt: 'SNMP Tool alternate overview screenshot',
       },
       {
+        id: 'deviceInfo',
         url: new URL('../../ressources/projects_highschool/snmp-tool/2.jpg', import.meta.url).href,
-        alt: 'SNMP Tool device information screenshot',
       },
       {
+        id: 'monitoring',
         url: new URL('../../ressources/projects_highschool/snmp-tool/3.jpg', import.meta.url).href,
-        alt: 'SNMP Tool monitoring screenshot',
       },
       {
+        id: 'networkData',
         url: new URL('../../ressources/projects_highschool/snmp-tool/4.jpg', import.meta.url).href,
-        alt: 'SNMP Tool network data screenshot',
       },
       {
+        id: 'finalData',
         url: new URL('../../ressources/projects_highschool/snmp-tool/5.jpg', import.meta.url).href,
-        alt: 'SNMP Tool final network data screenshot',
       },
     ],
     accent: 'from-rose-500 to-red-500',
   },
 ];
 
-export const experience: TimelineItem[] = [
-  {
-    title: 'Software Engineering Internship',
-    organization: 'Company Name',
-    period: 'Add dates',
-    description:
-      'Placeholder for internship responsibilities, technical achievements, team context, and measurable results.',
-    tags: ['Internship', 'Software Engineering'],
-  },
-  {
-    title: 'Student Developer Role',
-    organization: 'Organization Name',
-    period: 'Add dates',
-    description:
-      'Placeholder for student jobs, research support, tooling work, teaching assistance, or production contributions.',
-    tags: ['Student Job', 'Development'],
-  },
-  {
-    title: 'Research or Project Collaboration',
-    organization: 'Lab or Team Name',
-    period: 'Add dates',
-    description:
-      'Placeholder for academic, AI, simulation, or game-development collaborations that should appear in the CV timeline.',
-    tags: ['Research', 'Collaboration'],
-  },
+export const experienceItems: TimelineItem<ExperienceId>[] = [
+  { id: 'internship' },
+  { id: 'studentDeveloper' },
+  { id: 'researchCollaboration' },
 ];
 
-export const education: TimelineItem[] = [
-  {
-    title: 'Bachelor’s Degree in Computer Science',
-    organization: 'University of Innsbruck',
-    period: 'Completed',
-    description:
-      'Academic foundation in computer science, software engineering, algorithms, systems, artificial intelligence, and interactive technologies.',
-    tags: ['Computer Science', 'University'],
-  },
-  {
-    title: 'Future Certification or Degree',
-    organization: 'Institution Name',
-    period: 'Add dates',
-    description: 'Placeholder for future degrees, professional certifications, or specialized training.',
-    tags: ['Certification', 'Future'],
-  },
+export const educationItems: TimelineItem<EducationId>[] = [
+  { id: 'bachelorComputerScience' },
+  { id: 'futureCredential' },
 ];
 
-export const blogPosts = [
-  {
-    title: 'Notes on Speech Interfaces for Creative Tools',
-    description: 'A future article about turning spoken commands into reliable interactions.',
-    icon: Microscope,
-  },
-  {
-    title: 'Building Simulation Systems That Feel Playable',
-    description: 'A future write-up on balancing physical correctness with game feel.',
-    icon: Settings2,
-  },
-  {
-    title: 'What I Am Learning Next',
-    description: 'A running list of technologies, papers, and engineering ideas worth exploring.',
-    icon: Sparkles,
-  },
+export const blogPosts: BlogPost[] = [
+  { id: 'speechInterfaces', icon: Microscope },
+  { id: 'simulationSystems', icon: Settings2 },
+  { id: 'learningNext', icon: Sparkles },
 ];
 
-export const contactLinks = [
-  { label: 'Email', value: profile.email, href: `mailto:${profile.email}`, icon: Mail },
-  { label: 'GitHub', value: 'github.com/your-github', href: profile.github, icon: Github },
-  { label: 'LinkedIn', value: 'linkedin.com/in/your-linkedin', href: profile.linkedin, icon: Linkedin },
-  { label: 'Location', value: profile.location, href: '#contact', icon: Rocket },
+export const contactLinks: ContactLink[] = [
+  { id: 'email', href: 'mailto:your.email@example.com', icon: Mail },
+  { id: 'github', href: 'https://github.com/your-github', icon: Github },
+  { id: 'linkedin', href: 'https://www.linkedin.com/in/your-linkedin', icon: Linkedin },
+  { id: 'location', href: '#contact', icon: Rocket },
 ];
-
-export const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: profile.name,
-  jobTitle: 'Software Engineer',
-  description: profile.intro,
-  url: 'https://hannes-roed.github.io/',
-  sameAs: [profile.github, profile.linkedin],
-  alumniOf: {
-    '@type': 'CollegeOrUniversity',
-    name: 'University of Innsbruck',
-  },
-  knowsAbout: [
-    'Software Engineering',
-    'Artificial Intelligence',
-    'Speech Recognition',
-    'Machine Learning',
-    'Game Development',
-    'Simulation',
-  ],
-};

@@ -29,6 +29,18 @@ body {
     @apply rounded-lg px-3 py-2 text-sm font-semibold text-ink-700 transition hover:bg-ink-900/5 hover:text-ink-950 dark:text-ink-200 dark:hover:bg-white/10 dark:hover:text-white;
   }
 
+  .language-switch {
+    @apply inline-flex h-10 items-center rounded-lg border border-ink-900/10 bg-white p-1 shadow-sm dark:border-white/10 dark:bg-white/5;
+  }
+
+  .language-option {
+    @apply grid h-8 min-w-9 place-items-center rounded-md px-2 text-xs font-black text-ink-600 transition hover:bg-ink-900/5 hover:text-accent-700 dark:text-ink-200 dark:hover:bg-white/10 dark:hover:text-accent-400;
+  }
+
+  .language-option-active {
+    @apply bg-ink-950 text-white hover:bg-ink-950 hover:text-white dark:bg-white dark:text-ink-950 dark:hover:bg-white dark:hover:text-ink-950;
+  }
+
   .button-primary {
     @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-ink-950 px-5 py-3 text-sm font-bold text-white shadow-panel transition hover:-translate-y-0.5 hover:bg-accent-600 focus:outline-none focus:ring-4 focus:ring-accent-500/30 dark:bg-white dark:text-ink-950 dark:hover:bg-accent-400;
   }
