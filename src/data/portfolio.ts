@@ -178,16 +178,16 @@ export const projects: Project[] = [
     technologies: ['Robotics', 'Pick and Place', 'Motion Planning', 'Simulation'],
     images: [
       {
-        id: 'pickPlaceShortDemo',
-        type: 'video',
-        url: new URL('../../ressources/projects_bachelor/robotics/robotics_pick_and_place/short.mp4', import.meta.url).href,
-        posterUrl: new URL('../../ressources/projects_bachelor/robotics/generated/pick-place-short-poster.jpg', import.meta.url).href,
-      },
-      {
         id: 'pickPlaceLongDemo',
         type: 'video',
         url: new URL('../../ressources/projects_bachelor/robotics/robotics_pick_and_place/long.mp4', import.meta.url).href,
         posterUrl: new URL('../../ressources/projects_bachelor/robotics/generated/pick-place-long-poster.jpg', import.meta.url).href,
+      },
+      {
+        id: 'pickPlaceShortDemo',
+        type: 'video',
+        url: new URL('../../ressources/projects_bachelor/robotics/robotics_pick_and_place/short.mp4', import.meta.url).href,
+        posterUrl: new URL('../../ressources/projects_bachelor/robotics/generated/pick-place-short-poster.jpg', import.meta.url).href,
       },
     ],
     accent: 'from-violet-500 to-fuchsia-500',

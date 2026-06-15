@@ -17,7 +17,7 @@ import {
   Sun,
   X,
 } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { languageOptions, siteContent, type Language, type SiteContent } from './data/content';
 import {
   blogPosts,
@@ -405,12 +405,18 @@ function getArtifactLabel(projectText: SiteContent['projects'][ProjectId], artif
 
 function ProjectSlideshow({ project, content }: { project: Project; content: SiteContent }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   if (project.images.length === 0) return null;
 
   const hasMultipleImages = project.images.length > 1;
   const activeImage = project.images[activeIndex];
   const projectText = content.projects[project.id];
   const imageAlt = projectText.images[activeImage.id as keyof typeof projectText.images];
+
+  useEffect(() => {
+    setIsVideoPlaying(false);
+  }, [activeImage.url]);
 
   const showPrevious = () => {
     setActiveIndex((current) => (current === 0 ? project.images.length - 1 : current - 1));
@@ -420,6 +426,10 @@ function ProjectSlideshow({ project, content }: { project: Project; content: Sit
     setActiveIndex((current) => (current + 1) % project.images.length);
   };
 
+  const playActiveVideo = () => {
+    videoRef.current?.play();
+  };
+
   return (
     <div className={`mb-6 overflow-hidden rounded-lg bg-gradient-to-br ${project.accent} p-1`}>
       <div className="relative aspect-video overflow-hidden rounded-md bg-white/85 p-3 dark:bg-ink-950/60">
@@ -427,17 +437,28 @@ function ProjectSlideshow({ project, content }: { project: Project; content: Sit
           <>
             <video
               key={activeImage.url}
+              ref={videoRef}
               className="h-full w-full object-contain"
               controls
               preload="none"
               poster={activeImage.posterUrl}
               aria-label={imageAlt}
+              onPlay={() => setIsVideoPlaying(true)}
+              onPause={() => setIsVideoPlaying(false)}
+              onEnded={() => setIsVideoPlaying(false)}
             >
               <source src={activeImage.url} type="video/mp4" />
             </video>
-            <div className="pointer-events-none absolute left-1/2 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-ink-950/80 text-white shadow-panel ring-1 ring-white/30">
-              <Play className="ml-1 h-7 w-7 fill-current" />
-            </div>
+            {!isVideoPlaying && (
+              <button
+                type="button"
+                className="absolute left-1/2 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-ink-950/80 text-white shadow-panel ring-1 ring-white/30 transition hover:scale-105 hover:bg-accent-600 focus:outline-none focus:ring-4 focus:ring-accent-500/30"
+                aria-label={`Play ${imageAlt}`}
+                onClick={playActiveVideo}
+              >
+                <Play className="ml-1 h-7 w-7 fill-current" />
+              </button>
+            )}
           </>
         ) : (
           <img src={activeImage.url} alt={imageAlt} className="h-full w-full object-contain" loading="lazy" />
