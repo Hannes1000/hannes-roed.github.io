@@ -173,7 +173,6 @@ export const contentEn = {
         sensorstations: 'Plant Health admin sensor stations dashboard',
         adminPlant: 'Plant Health admin plant detail',
         measurements: 'Plant Health measurement table',
-        gallery: 'Plant Health image gallery',
         users: 'Plant Health admin user management',
         auditLog: 'Plant Health audit log',
         hardware: 'Plant Health Arduino hardware schematic',

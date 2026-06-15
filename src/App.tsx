@@ -435,8 +435,8 @@ function ProjectSlideshow({ project, content }: { project: Project; content: Sit
             >
               <source src={activeImage.url} type="video/mp4" />
             </video>
-            <div className="pointer-events-none absolute left-6 top-6 grid h-10 w-10 place-items-center rounded-lg bg-ink-950/80 text-white shadow-panel">
-              <Play className="h-5 w-5 fill-current" />
+            <div className="pointer-events-none absolute left-1/2 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-ink-950/80 text-white shadow-panel ring-1 ring-white/30">
+              <Play className="ml-1 h-7 w-7 fill-current" />
             </div>
           </>
         ) : (

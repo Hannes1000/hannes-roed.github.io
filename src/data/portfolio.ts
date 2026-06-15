@@ -276,10 +276,6 @@ export const projects: Project[] = [
         url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/06-real-measurement-table.png', import.meta.url).href,
       },
       {
-        id: 'gallery',
-        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/07-real-image-gallery.png', import.meta.url).href,
-      },
-      {
         id: 'users',
         url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/08-real-admin-user-management.png', import.meta.url).href,
       },
