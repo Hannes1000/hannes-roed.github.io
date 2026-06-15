@@ -12,6 +12,7 @@ import {
   Mail,
   Menu,
   Moon,
+  Play,
   Send,
   Sun,
   X,
@@ -404,6 +405,8 @@ function getArtifactLabel(projectText: SiteContent['projects'][ProjectId], artif
 
 function ProjectSlideshow({ project, content }: { project: Project; content: SiteContent }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  if (project.images.length === 0) return null;
+
   const hasMultipleImages = project.images.length > 1;
   const activeImage = project.images[activeIndex];
   const projectText = content.projects[project.id];
@@ -420,7 +423,25 @@ function ProjectSlideshow({ project, content }: { project: Project; content: Sit
   return (
     <div className={`mb-6 overflow-hidden rounded-lg bg-gradient-to-br ${project.accent} p-1`}>
       <div className="relative aspect-video overflow-hidden rounded-md bg-white/85 p-3 dark:bg-ink-950/60">
-        <img src={activeImage.url} alt={imageAlt} className="h-full w-full object-contain" loading="lazy" />
+        {activeImage.type === 'video' ? (
+          <>
+            <video
+              key={activeImage.url}
+              className="h-full w-full object-contain"
+              controls
+              preload="none"
+              poster={activeImage.posterUrl}
+              aria-label={imageAlt}
+            >
+              <source src={activeImage.url} type="video/mp4" />
+            </video>
+            <div className="pointer-events-none absolute left-6 top-6 grid h-10 w-10 place-items-center rounded-lg bg-ink-950/80 text-white shadow-panel">
+              <Play className="h-5 w-5 fill-current" />
+            </div>
+          </>
+        ) : (
+          <img src={activeImage.url} alt={imageAlt} className="h-full w-full object-contain" loading="lazy" />
+        )}
         {hasMultipleImages && (
           <>
             <button

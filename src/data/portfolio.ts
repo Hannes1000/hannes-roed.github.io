@@ -14,7 +14,17 @@ import {
 import type { LucideIcon } from 'lucide-react';
 
 export type SkillGroupId = 'programming' | 'gameDevelopment' | 'aiMachineLearning' | 'softwareEngineering';
-export type ProjectId = 'bachelorThesis' | 'franzFotoArchiv' | 'fruitShop' | 'quisepp' | 'snmpTool';
+export type ProjectId =
+  | 'bachelorThesis'
+  | 'roboticsInverseKinematics'
+  | 'roboticsPickAndPlace'
+  | 'memori'
+  | 'plantHealth'
+  | 'physicallyBasedSimulation'
+  | 'franzFotoArchiv'
+  | 'fruitShop'
+  | 'quisepp'
+  | 'snmpTool';
 export type ExperienceId = 'internship' | 'studentDeveloper' | 'researchCollaboration';
 export type EducationId = 'bachelorComputerScience' | 'futureCredential';
 export type BlogPostId = 'speechInterfaces' | 'simulationSystems' | 'learningNext';
@@ -28,6 +38,8 @@ export type SkillGroup = {
 export type ProjectImage = {
   id: string;
   url: string;
+  type?: 'image' | 'video';
+  posterUrl?: string;
 };
 
 export type ProjectArtifact = {
@@ -141,6 +153,174 @@ export const projects: Project[] = [
       },
     ],
     accent: 'from-teal-500 to-cyan-500',
+  },
+  {
+    id: 'roboticsInverseKinematics',
+    technologies: ['Robotics', 'Inverse Kinematics', 'Control', 'Simulation'],
+    artifacts: [
+      {
+        id: 'presentation',
+        url: new URL('../../ressources/projects_bachelor/robotics/robotics_inverse_kinematics/First_Assignment_-_Inverse_kinematics_Control_-_Presentation.pdf', import.meta.url).href,
+      },
+    ],
+    images: [
+      {
+        id: 'inverseKinematicsDemo',
+        type: 'video',
+        url: new URL('../../ressources/projects_bachelor/robotics/robotics_inverse_kinematics/1.mp4', import.meta.url).href,
+        posterUrl: new URL('../../ressources/projects_bachelor/robotics/generated/inverse-kinematics-poster.jpg', import.meta.url).href,
+      },
+    ],
+    accent: 'from-indigo-500 to-sky-500',
+  },
+  {
+    id: 'roboticsPickAndPlace',
+    technologies: ['Robotics', 'Pick and Place', 'Motion Planning', 'Simulation'],
+    images: [
+      {
+        id: 'pickPlaceShortDemo',
+        type: 'video',
+        url: new URL('../../ressources/projects_bachelor/robotics/robotics_pick_and_place/short.mp4', import.meta.url).href,
+        posterUrl: new URL('../../ressources/projects_bachelor/robotics/generated/pick-place-short-poster.jpg', import.meta.url).href,
+      },
+      {
+        id: 'pickPlaceLongDemo',
+        type: 'video',
+        url: new URL('../../ressources/projects_bachelor/robotics/robotics_pick_and_place/long.mp4', import.meta.url).href,
+        posterUrl: new URL('../../ressources/projects_bachelor/robotics/generated/pick-place-long-poster.jpg', import.meta.url).href,
+      },
+    ],
+    accent: 'from-violet-500 to-fuchsia-500',
+  },
+  {
+    id: 'memori',
+    technologies: ['Software Architecture', 'Web App', 'UML', 'Team Project'],
+    sourceUrl: 'https://git.uibk.ac.at/informatik/qe/swa_swe/swa/swapsws22/group2/g2t2',
+    artifacts: [
+      {
+        id: 'uiSketch',
+        url: new URL('../../ressources/projects_bachelor/software_architecture_memori/complementary-material/UISKETCH.pdf', import.meta.url).href,
+      },
+      {
+        id: 'domainModel',
+        url: new URL('../../ressources/projects_bachelor/software_architecture_memori/complementary-material/domain_model_uml.pdf', import.meta.url).href,
+      },
+    ],
+    images: [
+      {
+        id: 'login',
+        url: new URL('../../ressources/projects_bachelor/software_architecture_memori/01-login-masteroogway.png', import.meta.url).href,
+      },
+      {
+        id: 'myDecks',
+        url: new URL('../../ressources/projects_bachelor/software_architecture_memori/02-my-decks-grid.png', import.meta.url).href,
+      },
+      {
+        id: 'publishedDecks',
+        url: new URL('../../ressources/projects_bachelor/software_architecture_memori/03-published-decks-to-import.png', import.meta.url).href,
+      },
+      {
+        id: 'importedDecks',
+        url: new URL('../../ressources/projects_bachelor/software_architecture_memori/04-imported-decks.png', import.meta.url).href,
+      },
+      {
+        id: 'editDeck',
+        url: new URL('../../ressources/projects_bachelor/software_architecture_memori/05-edit-deck-with-cards.png', import.meta.url).href,
+      },
+      {
+        id: 'learnFront',
+        url: new URL('../../ressources/projects_bachelor/software_architecture_memori/06-learn-card-front.png', import.meta.url).href,
+      },
+      {
+        id: 'learnAnswer',
+        url: new URL('../../ressources/projects_bachelor/software_architecture_memori/07-learn-card-answer.png', import.meta.url).href,
+      },
+      {
+        id: 'userManagement',
+        url: new URL('../../ressources/projects_bachelor/software_architecture_memori/08-admin-user-management.png', import.meta.url).href,
+      },
+      {
+        id: 'deckModeration',
+        url: new URL('../../ressources/projects_bachelor/software_architecture_memori/09-admin-deck-moderation.png', import.meta.url).href,
+      },
+    ],
+    accent: 'from-cyan-500 to-blue-500',
+  },
+  {
+    id: 'plantHealth',
+    technologies: ['Software Engineering', 'IoT', 'Dashboard', 'Team Project'],
+    sourceUrl: 'https://git.uibk.ac.at/informatik/qe/swess23/group2/g2t2.git',
+    images: [
+      {
+        id: 'landing',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/01-real-landing-page.png', import.meta.url).href,
+      },
+      {
+        id: 'login',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/02-real-login-page.png', import.meta.url).href,
+      },
+      {
+        id: 'accesspoints',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/03-real-admin-accesspoints-dashboard.png', import.meta.url).href,
+      },
+      {
+        id: 'sensorstations',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/04-real-admin-sensorstations-dashboard.png', import.meta.url).href,
+      },
+      {
+        id: 'adminPlant',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/05-real-admin-plant-detail.png', import.meta.url).href,
+      },
+      {
+        id: 'measurements',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/06-real-measurement-table.png', import.meta.url).href,
+      },
+      {
+        id: 'gallery',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/07-real-image-gallery.png', import.meta.url).href,
+      },
+      {
+        id: 'users',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/08-real-admin-user-management.png', import.meta.url).href,
+      },
+      {
+        id: 'auditLog',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/09-real-audit-log.png', import.meta.url).href,
+      },
+      {
+        id: 'hardware',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/10-hardware-arduino-schaltplan.png', import.meta.url).href,
+      },
+      {
+        id: 'gardenerDashboard',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/10-real-gardener-dashboard.png', import.meta.url).href,
+      },
+      {
+        id: 'gardenerPlant',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/11-real-gardener-plant-detail.png', import.meta.url).href,
+      },
+      {
+        id: 'userDashboard',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/12-real-user-dashboard.png', import.meta.url).href,
+      },
+      {
+        id: 'userPlant',
+        url: new URL('../../ressources/projects_bachelor/software_engineering_plant_health/13-real-user-plant-detail.png', import.meta.url).href,
+      },
+    ],
+    accent: 'from-emerald-500 to-teal-500',
+  },
+  {
+    id: 'physicallyBasedSimulation',
+    technologies: ['Physics Simulation', 'Cloth Simulation', 'Computer Graphics', 'Master Project'],
+    artifacts: [
+      {
+        id: 'clothSimulation',
+        url: new URL('../../ressources/projects_master/physically_based_simulation/phys_sim_cloth_sim.pdf', import.meta.url).href,
+      },
+    ],
+    images: [],
+    accent: 'from-slate-500 to-zinc-500',
   },
   {
     id: 'franzFotoArchiv',

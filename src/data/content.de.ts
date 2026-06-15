@@ -122,6 +122,76 @@ export const contentDe = {
         results12: 'Finale Evaluationsergebnisse der Bachelorarbeit',
       },
     },
+    roboticsInverseKinematics: {
+      title: 'Robotik: Inverse-Kinematik-Steuerung',
+      description:
+        'Eine Robotik-Aufgabe zur Inverse-Kinematik-Steuerung, die zeigt, wie ein simuliertes Robotersystem ueber zielbasierte Bewegungen gefuehrt werden kann.',
+      artifacts: {
+        presentation: 'Praesentation oeffnen',
+      },
+      images: {
+        inverseKinematicsDemo: 'Demo-Video zur Inverse-Kinematik in der Robotik',
+      },
+    },
+    roboticsPickAndPlace: {
+      title: 'Robotik: Pick and Place',
+      description:
+        'Ein Robotik-Projekt zu Pick-and-Place-Ablaeufen mit Objekthandling, Bewegungsplanung und simuliertem Roboterverhalten in kurzen und laengeren Demo-Videos.',
+      images: {
+        pickPlaceShortDemo: 'Kurzes Demo-Video zum Pick-and-Place-Roboter',
+        pickPlaceLongDemo: 'Laengeres Demo-Video zum Pick-and-Place-Roboter',
+      },
+    },
+    memori: {
+      title: 'Memori',
+      description:
+        'Ein Softwarearchitektur-Teamprojekt fuer eine Flashcard-Lernplattform mit Deck-Verwaltung, Publish- und Import-Workflows, Lernansichten, Admin-Screens und Architekturdokumentation.',
+      artifacts: {
+        uiSketch: 'UI-Skizze oeffnen',
+        domainModel: 'Domain Model oeffnen',
+      },
+      images: {
+        login: 'Login-Ansicht von Memori',
+        myDecks: 'Deck-Uebersicht von Memori',
+        publishedDecks: 'Importansicht fuer veroeffentlichte Decks in Memori',
+        importedDecks: 'Importierte Decks in Memori',
+        editDeck: 'Deck-Editor mit Karten in Memori',
+        learnFront: 'Vorderseite einer Lernkarte in Memori',
+        learnAnswer: 'Antwortansicht einer Lernkarte in Memori',
+        userManagement: 'Admin-Benutzerverwaltung in Memori',
+        deckModeration: 'Admin-Deckmoderation in Memori',
+      },
+    },
+    plantHealth: {
+      title: 'Plant Health Monitoring',
+      description:
+        'Ein Software-Engineering-Teamprojekt zur Pflanzenueberwachung mit rollenbasierten Dashboards, Sensorstationsverwaltung, Messwertansichten, Bildergalerien, Audit-Logs und Hardwaredokumentation.',
+      images: {
+        landing: 'Landing Page von Plant Health',
+        login: 'Login-Seite von Plant Health',
+        accesspoints: 'Admin-Dashboard fuer Access Points in Plant Health',
+        sensorstations: 'Admin-Dashboard fuer Sensorstationen in Plant Health',
+        adminPlant: 'Admin-Pflanzendetailansicht in Plant Health',
+        measurements: 'Messwerttabelle in Plant Health',
+        gallery: 'Bildergalerie in Plant Health',
+        users: 'Admin-Benutzerverwaltung in Plant Health',
+        auditLog: 'Audit-Log in Plant Health',
+        hardware: 'Arduino-Hardware-Schaltplan fuer Plant Health',
+        gardenerDashboard: 'Gaertner-Dashboard in Plant Health',
+        gardenerPlant: 'Gaertner-Pflanzendetailansicht in Plant Health',
+        userDashboard: 'Benutzer-Dashboard in Plant Health',
+        userPlant: 'Benutzer-Pflanzendetailansicht in Plant Health',
+      },
+    },
+    physicallyBasedSimulation: {
+      title: 'Physically Based Simulation: Cloth Simulation',
+      description:
+        'Ein Masterprojekt zu Physically Based Simulation mit Fokus auf Cloth-Simulation, Konzepten und Implementierungsdetails in einer Projekt-PDF.',
+      artifacts: {
+        clothSimulation: 'Cloth-Simulation-PDF oeffnen',
+      },
+      images: {},
+    },
     franzFotoArchiv: {
       title: 'Franz Foto Archiv',
       description:

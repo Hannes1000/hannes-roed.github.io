@@ -12,10 +12,10 @@ export const contentEn = {
   ],
   profile: {
     name: 'Hannes Roed',
-    title: 'Software Engineer | AI Enthusiast | Game Developer',
+    title: 'Software Engineer',
     location: 'Innsbruck, Austria',
-    email: 'your.email@example.com',
-    githubValue: 'github.com/your-github',
+    email: 'roedhannes@gmail.com',
+    githubValue: 'https://github.com/Hannes1000',
     linkedinValue: 'linkedin.com/in/your-linkedin',
     heroEyebrow: 'Available for software engineering, AI, and game development roles',
     intro:
@@ -121,6 +121,76 @@ export const contentEn = {
         results11: 'Additional evaluation results from the bachelor thesis',
         results12: 'Final evaluation results from the bachelor thesis',
       },
+    },
+    roboticsInverseKinematics: {
+      title: 'Robotics: Inverse Kinematics Control',
+      description:
+        'A robotics assignment focused on inverse kinematics control, showing how a simulated robotic system can be guided through target-driven motion.',
+      artifacts: {
+        presentation: 'Open presentation',
+      },
+      images: {
+        inverseKinematicsDemo: 'Inverse kinematics robotics demo video',
+      },
+    },
+    roboticsPickAndPlace: {
+      title: 'Robotics: Pick and Place',
+      description:
+        'A robotics pick-and-place project demonstrating object handling, motion planning, and simulated robot behavior through short and extended demo videos.',
+      images: {
+        pickPlaceShortDemo: 'Short robotics pick-and-place demo video',
+        pickPlaceLongDemo: 'Extended robotics pick-and-place demo video',
+      },
+    },
+    memori: {
+      title: 'Memori',
+      description:
+        'A software architecture team project for a flashcard learning platform, including deck management, publishing/import flows, learning views, admin screens, and architecture documentation.',
+      artifacts: {
+        uiSketch: 'Open UI sketch',
+        domainModel: 'Open domain model',
+      },
+      images: {
+        login: 'Memori login screen',
+        myDecks: 'Memori deck overview',
+        publishedDecks: 'Memori published decks import screen',
+        importedDecks: 'Memori imported decks screen',
+        editDeck: 'Memori deck editor with cards',
+        learnFront: 'Memori learning card front',
+        learnAnswer: 'Memori learning card answer',
+        userManagement: 'Memori admin user management',
+        deckModeration: 'Memori admin deck moderation',
+      },
+    },
+    plantHealth: {
+      title: 'Plant Health Monitoring',
+      description:
+        'A software engineering team project for monitoring plants with role-based dashboards, sensor station management, measurement views, image galleries, audit logs, and hardware documentation.',
+      images: {
+        landing: 'Plant Health landing page',
+        login: 'Plant Health login page',
+        accesspoints: 'Plant Health admin access points dashboard',
+        sensorstations: 'Plant Health admin sensor stations dashboard',
+        adminPlant: 'Plant Health admin plant detail',
+        measurements: 'Plant Health measurement table',
+        gallery: 'Plant Health image gallery',
+        users: 'Plant Health admin user management',
+        auditLog: 'Plant Health audit log',
+        hardware: 'Plant Health Arduino hardware schematic',
+        gardenerDashboard: 'Plant Health gardener dashboard',
+        gardenerPlant: 'Plant Health gardener plant detail',
+        userDashboard: 'Plant Health user dashboard',
+        userPlant: 'Plant Health user plant detail',
+      },
+    },
+    physicallyBasedSimulation: {
+      title: 'Physically Based Simulation: Cloth Simulation',
+      description:
+        'A master-level physically based simulation project focused on cloth simulation concepts and implementation details documented in a project PDF.',
+      artifacts: {
+        clothSimulation: 'Open cloth simulation PDF',
+      },
+      images: {},
     },
     franzFotoArchiv: {
       title: 'Franz Foto Archiv',
