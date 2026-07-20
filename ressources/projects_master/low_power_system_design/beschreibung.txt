@@ -1,0 +1,1 @@
+thermal sensor Station using ESP32-C6; Goal as less power consuming as possible to put into remot locations

@@ -8,18 +8,19 @@ export const contentDe = {
     { label: 'Projekte', href: '#projects' },
     { label: 'Erfahrung', href: '#experience' },
     { label: 'Ausbildung', href: '#education' },
+    { label: 'Blog', href: '#blog' },
     { label: 'Kontakt', href: '#contact' },
   ],
   profile: {
     name: 'Hannes Roed',
-    title: 'Softwareentwickler | KI-Enthusiast | Game Developer',
+    title: 'Informatik',
     location: 'Innsbruck, Österreich',
     email: 'roedhannes@gmail.com',
     githubValue: 'https://github.com/Hannes1000',
     linkedinValue: 'linkedin.com/in/your-linkedin',
-    heroEyebrow: 'Offen für Rollen in Softwareentwicklung, KI und Game Development',
+    heroEyebrow: 'Offen für Rollen in Softwareentwicklung',
     intro:
-      'Informatik-Absolvent mit Fokus auf interaktive Systeme an der Schnittstelle von Softwareentwicklung, künstlicher Intelligenz und Simulation.',
+      'Informatik-Absolvent mit Fokus auf interaktive Systeme an der Schnittstelle von Softwareentwicklung, künstlicher Intelligenz, Robotik und Simulation.',
     bio:
       'Ich habe meinen Bachelor in Informatik an der Universität Innsbruck abgeschlossen und arbeite gerne an Software, die interaktiv, robust und technisch spannend ist. Meine Interessen umfassen künstliche Intelligenz, Spracherkennung, Machine Learning, und Simulation. Ich mag es, komplexe Systeme in nutzbare Anwendungen zu verwandeln, zum Beispiel durch Sprachsteuerung in einer Unity-Sandbox, die Evaluation von ASR-Systemen oder die Umsetzung von Physik- und Simulationstechniken.',
     imageAlt: 'Profilfoto von Hannes Roed',
@@ -142,6 +143,15 @@ export const contentDe = {
         pickPlaceLongDemo: 'Laengeres Demo-Video zum Pick-and-Place-Roboter',
       },
     },
+    distributedSystems: {
+      title: 'Distributed-Systems-Praesentation',
+      description:
+        'Ein Bachelor-Projektartefakt zu Distributed Systems mit Fokus auf zentrale Konzepte, System-Trade-offs und die Praesentation verteilter Rechensysteme.',
+      artifacts: {
+        presentation: 'Praesentation oeffnen',
+      },
+      images: {},
+    },
     memori: {
       title: 'Memori',
       description:
@@ -185,11 +195,49 @@ export const contentDe = {
     physicallyBasedSimulation: {
       title: 'Physically Based Simulation: Cloth Simulation',
       description:
-        'Ein Masterprojekt zu Physically Based Simulation mit Fokus auf Cloth-Simulation, Konzepten und Implementierungsdetails in einer Projekt-PDF.',
+        'Ein Masterprojekt zu Physically Based Simulation mit Fokus auf Cloth-Simulation, Konzepten, Implementierungsdetails und einem gerenderten Demo-Video.',
       artifacts: {
         clothSimulation: 'Cloth-Simulation-PDF oeffnen',
       },
-      images: {},
+      images: {
+        clothSimulationDemo: 'Demo-Video der Cloth-Simulation',
+      },
+    },
+    currentTopicsComputerScience: {
+      title: 'Aktuelle Themen der Informatik',
+      description:
+        'Ein Master-Praesentationsprojekt zu einem aktuellen Informatikthema mit strukturierten Folien, visuellem Material und technischer Diskussion.',
+      artifacts: {
+        presentation: 'Praesentation oeffnen',
+      },
+      images: {
+        topicOverview: 'Uebersichtsfolie der Praesentation zu aktuellen Informatikthemen',
+        topicDetail: 'Detailfolie der Praesentation zu aktuellen Informatikthemen',
+        topicAnalysis: 'Analysefolie der Praesentation zu aktuellen Informatikthemen',
+        topicSummary: 'Zusammenfassungsfolie der Praesentation zu aktuellen Informatikthemen',
+      },
+    },
+    lowPowerSystemDesign: {
+      title: 'Low Power System Design: Thermal Sensor Station',
+      description:
+        'Ein Embedded-Systems-Projekt fuer eine Thermal-Sensor-Station mit ESP32-C6, ausgelegt auf moeglichst niedrigen Energieverbrauch fuer abgelegene Standorte.',
+      artifacts: {
+        proposal: 'Proposal oeffnen',
+      },
+      images: {
+        sensorStation: 'Prototyp der Low-Power-Thermal-Sensor-Station',
+      },
+    },
+    mixedReality: {
+      title: 'Mixed Reality: Kitchen Countdown',
+      description:
+        'Ein Meta-Quest-3-Multiplayer-Mixed-Reality-Spiel in Unity mit geteilter Interaktion, raeumlichem Gameplay und einer kuechenthematischen Countdown-Challenge.',
+      artifacts: {
+        presentation: 'Projekt-PDF oeffnen',
+      },
+      images: {
+        mixedRealityDemo: 'Gameplay-Video von Kitchen Countdown in Mixed Reality',
+      },
     },
     franzFotoArchiv: {
       title: 'Franz Foto Archiv',
@@ -297,11 +345,11 @@ export const contentDe = {
   contactLinks: {
     email: {
       label: 'E-Mail',
-      value: 'your.email@example.com',
+      value: 'roedhannes@gmail.com',
     },
     github: {
       label: 'GitHub',
-      value: 'github.com/your-github',
+      value: 'github.com/Hannes1000',
     },
     linkedin: {
       label: 'LinkedIn',

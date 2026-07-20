@@ -33,7 +33,6 @@ import {
   type ExperienceId,
   type Project,
   type ProjectId,
-  type SkillGroupId,
 } from './data/portfolio';
 
 type Theme = 'light' | 'dark';
@@ -407,16 +406,17 @@ function ProjectSlideshow({ project, content }: { project: Project; content: Sit
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  if (project.images.length === 0) return null;
 
   const hasMultipleImages = project.images.length > 1;
   const activeImage = project.images[activeIndex];
   const projectText = content.projects[project.id];
-  const imageAlt = projectText.images[activeImage.id as keyof typeof projectText.images];
+  const imageAlt = activeImage ? projectText.images[activeImage.id as keyof typeof projectText.images] : '';
 
   useEffect(() => {
     setIsVideoPlaying(false);
-  }, [activeImage.url]);
+  }, [activeImage?.url]);
+
+  if (!activeImage) return null;
 
   const showPrevious = () => {
     setActiveIndex((current) => (current === 0 ? project.images.length - 1 : current - 1));

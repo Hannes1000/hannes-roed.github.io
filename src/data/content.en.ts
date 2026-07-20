@@ -8,6 +8,7 @@ export const contentEn = {
     { label: 'Projects', href: '#projects' },
     { label: 'Experience', href: '#experience' },
     { label: 'Education', href: '#education' },
+    { label: 'Blog', href: '#blog' },
     { label: 'Contact', href: '#contact' },
   ],
   profile: {
@@ -142,6 +143,15 @@ export const contentEn = {
         pickPlaceLongDemo: 'Extended robotics pick-and-place demo video',
       },
     },
+    distributedSystems: {
+      title: 'Distributed Systems Presentation',
+      description:
+        'A bachelor-level distributed systems project artifact focused on core concepts, system trade-offs, and presentation of distributed computing topics.',
+      artifacts: {
+        presentation: 'Open presentation',
+      },
+      images: {},
+    },
     memori: {
       title: 'Memori',
       description:
@@ -185,11 +195,49 @@ export const contentEn = {
     physicallyBasedSimulation: {
       title: 'Physically Based Simulation: Cloth Simulation',
       description:
-        'A master-level physically based simulation project focused on cloth simulation concepts and implementation details documented in a project PDF.',
+        'A master-level physically based simulation project focused on cloth simulation concepts, implementation details, and a rendered cloth demo.',
       artifacts: {
         clothSimulation: 'Open cloth simulation PDF',
       },
-      images: {},
+      images: {
+        clothSimulationDemo: 'Cloth simulation demo video',
+      },
+    },
+    currentTopicsComputerScience: {
+      title: 'Current Topics in Computer Science',
+      description:
+        'A master-level presentation project exploring a current computer science topic through structured slides, visual material, and technical discussion.',
+      artifacts: {
+        presentation: 'Open presentation',
+      },
+      images: {
+        topicOverview: 'Current topics presentation overview slide',
+        topicDetail: 'Current topics presentation detail slide',
+        topicAnalysis: 'Current topics presentation analysis slide',
+        topicSummary: 'Current topics presentation summary slide',
+      },
+    },
+    lowPowerSystemDesign: {
+      title: 'Low Power System Design: Thermal Sensor Station',
+      description:
+        'An embedded systems project for an ESP32-C6 thermal sensor station, designed around low power consumption for deployment in remote locations.',
+      artifacts: {
+        proposal: 'Open proposal',
+      },
+      images: {
+        sensorStation: 'Low power thermal sensor station prototype',
+      },
+    },
+    mixedReality: {
+      title: 'Mixed Reality: Kitchen Countdown',
+      description:
+        'A Meta Quest 3 multiplayer mixed reality game built in Unity, combining shared interaction, spatial gameplay, and a kitchen-themed countdown challenge.',
+      artifacts: {
+        presentation: 'Open project PDF',
+      },
+      images: {
+        mixedRealityDemo: 'Kitchen Countdown mixed reality gameplay video',
+      },
     },
     franzFotoArchiv: {
       title: 'Franz Foto Archiv',
@@ -297,11 +345,11 @@ export const contentEn = {
   contactLinks: {
     email: {
       label: 'Email',
-      value: 'your.email@example.com',
+      value: 'roedhannes@gmail.com',
     },
     github: {
       label: 'GitHub',
-      value: 'github.com/your-github',
+      value: 'github.com/Hannes1000',
     },
     linkedin: {
       label: 'LinkedIn',

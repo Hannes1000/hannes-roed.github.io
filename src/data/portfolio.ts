@@ -3,7 +3,6 @@ import {
   Code2,
   Gamepad2,
   Github,
-  Linkedin,
   Mail,
   Microscope,
   Rocket,
@@ -18,8 +17,12 @@ export type ProjectId =
   | 'bachelorThesis'
   | 'roboticsInverseKinematics'
   | 'roboticsPickAndPlace'
+  | 'distributedSystems'
   | 'memori'
   | 'plantHealth'
+  | 'currentTopicsComputerScience'
+  | 'lowPowerSystemDesign'
+  | 'mixedReality'
   | 'physicallyBasedSimulation'
   | 'franzFotoArchiv'
   | 'fruitShop'
@@ -73,7 +76,7 @@ export type ContactLink = {
 };
 
 export const profileAssets = {
-  cvUrl: './cv-hannes-roed.pdf',
+  cvUrl: new URL('../../ressources/cv_hannes_roed.pdf', import.meta.url).href,
   imageUrl: new URL('../../ressources/profile_picture.png', import.meta.url).href,
 };
 
@@ -193,6 +196,18 @@ export const projects: Project[] = [
     accent: 'from-violet-500 to-fuchsia-500',
   },
   {
+    id: 'distributedSystems',
+    technologies: ['Distributed Systems', 'Systems Design', 'Fault Tolerance', 'Presentation'],
+    artifacts: [
+      {
+        id: 'presentation',
+        url: new URL('../../ressources/projects_bachelor/distributed_systems/presentation.pdf', import.meta.url).href,
+      },
+    ],
+    images: [],
+    accent: 'from-blue-500 to-indigo-500',
+  },
+  {
     id: 'memori',
     technologies: ['Software Architecture', 'Web App', 'UML', 'Team Project'],
     sourceUrl: 'https://git.uibk.ac.at/informatik/qe/swa_swe/swa/swapsws22/group2/g2t2',
@@ -307,6 +322,70 @@ export const projects: Project[] = [
     accent: 'from-emerald-500 to-teal-500',
   },
   {
+    id: 'currentTopicsComputerScience',
+    technologies: ['Computer Science', 'Research Topics', 'Presentation', 'Master Project'],
+    artifacts: [
+      {
+        id: 'presentation',
+        url: new URL('../../ressources/projects_master/actuelle_themen_der_informatik/presentation.pdf', import.meta.url).href,
+      },
+    ],
+    images: [
+      {
+        id: 'topicOverview',
+        url: new URL('../../ressources/projects_master/actuelle_themen_der_informatik/1.png', import.meta.url).href,
+      },
+      {
+        id: 'topicDetail',
+        url: new URL('../../ressources/projects_master/actuelle_themen_der_informatik/2.png', import.meta.url).href,
+      },
+      {
+        id: 'topicAnalysis',
+        url: new URL('../../ressources/projects_master/actuelle_themen_der_informatik/3.png', import.meta.url).href,
+      },
+      {
+        id: 'topicSummary',
+        url: new URL('../../ressources/projects_master/actuelle_themen_der_informatik/4.png', import.meta.url).href,
+      },
+    ],
+    accent: 'from-sky-500 to-cyan-500',
+  },
+  {
+    id: 'lowPowerSystemDesign',
+    technologies: ['ESP32-C6', 'Embedded Systems', 'Low Power', 'Thermal Sensing'],
+    artifacts: [
+      {
+        id: 'proposal',
+        url: new URL('../../ressources/projects_master/low_power_system_design/LSPD_Proposal_Group4.pdf', import.meta.url).href,
+      },
+    ],
+    images: [
+      {
+        id: 'sensorStation',
+        url: new URL('../../ressources/projects_master/low_power_system_design/1.jpeg', import.meta.url).href,
+      },
+    ],
+    accent: 'from-emerald-500 to-lime-500',
+  },
+  {
+    id: 'mixedReality',
+    technologies: ['Unity', 'Meta Quest 3', 'Mixed Reality', 'Multiplayer'],
+    artifacts: [
+      {
+        id: 'presentation',
+        url: new URL('../../ressources/projects_master/mixed_reality/Kitchen Countdown.pdf', import.meta.url).href,
+      },
+    ],
+    images: [
+      {
+        id: 'mixedRealityDemo',
+        type: 'video',
+        url: new URL('../../ressources/projects_master/mixed_reality/1.mp4', import.meta.url).href,
+      },
+    ],
+    accent: 'from-fuchsia-500 to-rose-500',
+  },
+  {
     id: 'physicallyBasedSimulation',
     technologies: ['Physics Simulation', 'Cloth Simulation', 'Computer Graphics', 'Master Project'],
     artifacts: [
@@ -315,7 +394,13 @@ export const projects: Project[] = [
         url: new URL('../../ressources/projects_master/physically_based_simulation/phys_sim_cloth_sim.pdf', import.meta.url).href,
       },
     ],
-    images: [],
+    images: [
+      {
+        id: 'clothSimulationDemo',
+        type: 'video',
+        url: new URL('../../ressources/projects_master/physically_based_simulation/1.mp4', import.meta.url).href,
+      },
+    ],
     accent: 'from-slate-500 to-zinc-500',
   },
   {
@@ -451,8 +536,7 @@ export const blogPosts: BlogPost[] = [
 ];
 
 export const contactLinks: ContactLink[] = [
-  { id: 'email', href: 'mailto:your.email@example.com', icon: Mail },
-  { id: 'github', href: 'https://github.com/your-github', icon: Github },
-  { id: 'linkedin', href: 'https://www.linkedin.com/in/your-linkedin', icon: Linkedin },
+  { id: 'email', href: 'mailto:roedhannes@gmail.com', icon: Mail },
+  { id: 'github', href: 'https://github.com/Hannes1000', icon: Github },
   { id: 'location', href: '#contact', icon: Rocket },
 ];
