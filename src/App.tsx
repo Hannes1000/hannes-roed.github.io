@@ -20,6 +20,7 @@ type LocalText = {
 
 type Project = {
   number: string;
+  slug: string;
   title: string;
   category: LocalText;
   description: LocalText;
@@ -38,6 +39,10 @@ const assets = {
     import.meta.url,
   ).href,
   mixedReality: new URL('../ressources/projects_master/mixed_reality/1.mp4', import.meta.url).href,
+  mixedRealityPoster: new URL(
+    '../ressources/projects_master/mixed_reality/poster.jpg',
+    import.meta.url,
+  ).href,
   mixedRealityPdf: new URL(
     '../ressources/projects_master/mixed_reality/Kitchen Countdown.pdf',
     import.meta.url,
@@ -62,6 +67,10 @@ const assets = {
     '../ressources/projects_master/physically_based_simulation/1.mp4',
     import.meta.url,
   ).href,
+  clothPoster: new URL(
+    '../ressources/projects_master/physically_based_simulation/poster.jpg',
+    import.meta.url,
+  ).href,
   clothPdf: new URL(
     '../ressources/projects_master/physically_based_simulation/phys_sim_cloth_sim.pdf',
     import.meta.url,
@@ -81,9 +90,13 @@ const copy = {
       { label: 'Kontakt', href: '#contact' },
     ],
     skip: 'Zum Inhalt springen',
+    navigationLabel: 'Hauptnavigation',
     menuOpen: 'Navigation öffnen',
     menuClose: 'Navigation schließen',
     language: 'Sprache auf Englisch wechseln',
+    pageTitle: 'Hannes Röd — Informatik & interaktive Systeme',
+    pageDescription:
+      'Portfolio von Hannes Röd: Informatik, Spracherkennung, Embedded Systems, Robotik, Simulation und Mixed Reality.',
     eyebrow: 'Informatik · Innsbruck / Südtirol',
     heroLineOne: 'Ich baue Software,',
     heroLineTwo: 'die man ausprobieren kann.',
@@ -110,7 +123,9 @@ const copy = {
     projectsTitle: 'Projekte, an denen ich etwas gelernt habe.',
     projectsIntro:
       'Statt alles aufzulisten, zeige ich hier die Arbeiten, die meine Interessen am besten verbinden: Interaktion, robuste Systeme und ein Ergebnis, das man sehen oder messen kann.',
+    projectIndexLabel: 'Direkt zu einem Projekt springen',
     detailLabel: 'Was daran interessant war',
+    technologiesLabel: 'Verwendete Technologien',
     pathEyebrow: 'Werdegang',
     pathTitle: 'Nicht ganz geradlinig. Dafür praktisch.',
     workTitle: 'Praxis',
@@ -125,6 +140,7 @@ const copy = {
     github: 'GitHub ansehen',
     location: 'Innsbruck, Österreich',
     footer: 'Entworfen und gebaut von Hannes Röd.',
+    backToTop: 'Nach oben',
   },
   en: {
     nav: [
@@ -134,9 +150,13 @@ const copy = {
       { label: 'Contact', href: '#contact' },
     ],
     skip: 'Skip to content',
+    navigationLabel: 'Main navigation',
     menuOpen: 'Open navigation',
     menuClose: 'Close navigation',
     language: 'Switch language to German',
+    pageTitle: 'Hannes Röd — Computer Science & interactive systems',
+    pageDescription:
+      'Portfolio of Hannes Röd: computer science, speech recognition, embedded systems, robotics, simulation, and mixed reality.',
     eyebrow: 'Computer Science · Innsbruck / South Tyrol',
     heroLineOne: 'I build software',
     heroLineTwo: 'you can actually try.',
@@ -163,7 +183,9 @@ const copy = {
     projectsTitle: 'Projects that taught me something.',
     projectsIntro:
       'Rather than list everything, these are the projects that best connect my interests: interaction, robust systems, and results you can see or measure.',
+    projectIndexLabel: 'Jump directly to a project',
     detailLabel: 'What made it interesting',
+    technologiesLabel: 'Technologies used',
     pathEyebrow: 'Background',
     pathTitle: 'Not perfectly linear. Definitely practical.',
     workTitle: 'Experience',
@@ -178,12 +200,14 @@ const copy = {
     github: 'View GitHub',
     location: 'Innsbruck, Austria',
     footer: 'Designed and built by Hannes Röd.',
+    backToTop: 'Back to top',
   },
 } as const;
 
 const projects: Project[] = [
   {
     number: '01',
+    slug: 'speech-controlled-brick-building',
     title: 'Speech Controlled Brick Building',
     category: { de: 'Bachelorarbeit · Unity & ASR', en: 'Bachelor thesis · Unity & ASR' },
     description: {
@@ -213,6 +237,7 @@ const projects: Project[] = [
   },
   {
     number: '02',
+    slug: 'kitchen-countdown',
     title: 'Kitchen Countdown',
     category: { de: 'Mixed Reality · Teamprojekt', en: 'Mixed reality · Team project' },
     description: {
@@ -227,6 +252,7 @@ const projects: Project[] = [
     media: {
       type: 'video',
       src: assets.mixedReality,
+      poster: assets.mixedRealityPoster,
       alt: {
         de: 'Demo des Mixed-Reality-Spiels Kitchen Countdown',
         en: 'Demo of the Kitchen Countdown mixed-reality game',
@@ -236,6 +262,7 @@ const projects: Project[] = [
   },
   {
     number: '03',
+    slug: 'low-power-sensor-station',
     title: 'Low-Power Sensor Station',
     category: { de: 'Embedded Systems · ESP32-C6', en: 'Embedded systems · ESP32-C6' },
     description: {
@@ -259,6 +286,7 @@ const projects: Project[] = [
   },
   {
     number: '04',
+    slug: 'scene-understanding',
     title: 'Scene Understanding',
     category: { de: 'Computer Vision · Szenengraphen', en: 'Computer vision · Scene graphs' },
     description: {
@@ -287,6 +315,7 @@ const projects: Project[] = [
   },
   {
     number: '05',
+    slug: 'cloth-simulation',
     title: 'Cloth Simulation',
     category: { de: 'Physiksimulation · Mass-Spring', en: 'Physics simulation · Mass-spring' },
     description: {
@@ -301,6 +330,7 @@ const projects: Project[] = [
     media: {
       type: 'video',
       src: assets.cloth,
+      poster: assets.clothPoster,
       alt: {
         de: 'Video der simulierten Stoffoberfläche',
         en: 'Video of the simulated cloth surface',
@@ -310,6 +340,7 @@ const projects: Project[] = [
   },
   {
     number: '06',
+    slug: 'plant-health',
     title: 'Plant Health',
     category: { de: 'Software Engineering · Teamprojekt', en: 'Software engineering · Team project' },
     description: {
@@ -392,9 +423,37 @@ const toolkit = [
   },
 ];
 
+const structuredData = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Hannes Röd',
+  url: 'https://hannes1000.github.io/hannes-roed.github.io/',
+  sameAs: ['https://github.com/Hannes1000'],
+  homeLocation: {
+    '@type': 'Place',
+    name: 'Innsbruck, Austria',
+  },
+  affiliation: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Universität Innsbruck',
+  },
+  knowsAbout: [
+    'Software Engineering',
+    'Automatic Speech Recognition',
+    'Embedded Systems',
+    'Robotics',
+    'Mixed Reality',
+    'Physics Simulation',
+  ],
+});
+
 function getInitialLanguage(): Language {
-  const stored = localStorage.getItem('portfolio-language');
-  return stored === 'en' ? 'en' : 'de';
+  try {
+    const stored = localStorage.getItem('portfolio-language');
+    return stored === 'en' ? 'en' : 'de';
+  } catch {
+    return 'de';
+  }
 }
 
 function App() {
@@ -404,24 +463,42 @@ function App() {
 
   useEffect(() => {
     document.documentElement.lang = language;
-    localStorage.setItem('portfolio-language', language);
-  }, [language]);
+    document.title = text.pageTitle;
+    document
+      .querySelector<HTMLMetaElement>('meta[name="description"]')
+      ?.setAttribute('content', text.pageDescription);
+    try {
+      localStorage.setItem('portfolio-language', language);
+    } catch {
+      // The page remains fully usable when browser storage is unavailable.
+    }
+  }, [language, text.pageDescription, text.pageTitle]);
+
+  useEffect(() => {
+    const closeMenuOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    };
+
+    window.addEventListener('keydown', closeMenuOnEscape);
+    return () => window.removeEventListener('keydown', closeMenuOnEscape);
+  }, []);
 
   const toggleLanguage = () => setLanguage((current) => (current === 'de' ? 'en' : 'de'));
 
   return (
     <div className="site-shell">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
       <a className="skip-link" href="#main">
         {text.skip}
       </a>
 
       <header className="site-header">
-        <nav className="nav-wrap" aria-label="Main navigation">
+        <nav className="nav-wrap" aria-label={text.navigationLabel}>
           <a className="wordmark" href="#top" onClick={() => setMenuOpen(false)}>
             Hannes Röd<span>.</span>
           </a>
 
-          <div className={`nav-links ${menuOpen ? 'is-open' : ''}`}>
+          <div id="site-navigation" className={`nav-links ${menuOpen ? 'is-open' : ''}`}>
             {text.nav.map((item) => (
               <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
                 {item.label}
@@ -446,6 +523,7 @@ function App() {
               onClick={() => setMenuOpen((current) => !current)}
               aria-label={menuOpen ? text.menuClose : text.menuOpen}
               aria-expanded={menuOpen}
+              aria-controls="site-navigation"
             >
               {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
             </button>
@@ -523,11 +601,23 @@ function App() {
               <h2>{text.projectsTitle}</h2>
             </div>
             <p>{text.projectsIntro}</p>
+            <nav className="project-index" aria-label={text.projectIndexLabel}>
+              <ol>
+                {projects.map((project) => (
+                  <li key={project.slug}>
+                    <a href={`#${project.slug}`}>
+                      <span>{project.number}</span>
+                      {project.title}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
           </div>
 
           <div className="project-list">
             {projects.map((project) => (
-              <article className="project" key={project.number}>
+              <article className="project" id={project.slug} key={project.number}>
                 <div className="project-number" aria-hidden="true">
                   {project.number}
                 </div>
@@ -537,7 +627,7 @@ function App() {
                       controls
                       muted
                       playsInline
-                      preload="metadata"
+                      preload="none"
                       poster={project.media.poster}
                       aria-label={project.media.alt[language]}
                     >
@@ -548,6 +638,7 @@ function App() {
                       src={project.media.src}
                       alt={project.media.alt[language]}
                       loading="lazy"
+                      decoding="async"
                     />
                   )}
                 </div>
@@ -559,7 +650,7 @@ function App() {
                     <span>{text.detailLabel}</span>
                     <p>{project.detail[language]}</p>
                   </div>
-                  <ul className="tag-list" aria-label="Technologies">
+                  <ul className="tag-list" aria-label={text.technologiesLabel}>
                     {project.tags.map((tag) => (
                       <li key={tag}>{tag}</li>
                     ))}
@@ -649,7 +740,7 @@ function App() {
       <footer>
         <p>© {new Date().getFullYear()} Hannes Röd</p>
         <p>{text.footer}</p>
-        <a href="#top">↑ Top</a>
+        <a href="#top">↑ {text.backToTop}</a>
       </footer>
     </div>
   );
