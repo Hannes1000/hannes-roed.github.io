@@ -3,27 +3,24 @@ export const contentDe = {
   languageToggleLabel: 'Sprache wechseln',
   navItems: [
     { label: 'Start', href: '#home' },
-    { label: 'Über mich', href: '#about' },
-    { label: 'Skills', href: '#skills' },
     { label: 'Projekte', href: '#projects' },
     { label: 'Erfahrung', href: '#experience' },
     { label: 'Ausbildung', href: '#education' },
-    { label: 'Blog', href: '#blog' },
     { label: 'Kontakt', href: '#contact' },
   ],
   profile: {
-    name: 'Hannes Roed',
+    name: 'Hannes Röd',
     title: 'Informatik',
     location: 'Innsbruck, Österreich',
     email: 'roedhannes@gmail.com',
     githubValue: 'https://github.com/Hannes1000',
     linkedinValue: 'linkedin.com/in/your-linkedin',
-    heroEyebrow: 'Offen für Rollen in Softwareentwicklung',
+    heroEyebrow: 'Informatik · Innsbruck / Südtirol',
     intro:
-      'Informatik-Absolvent mit Fokus auf interaktive Systeme an der Schnittstelle von Softwareentwicklung, künstlicher Intelligenz, Robotik und Simulation.',
+      'Ich habe meinen Bachelor in Informatik an der Universität Innsbruck abgeschlossen und arbeite gerne an Software, die interaktiv, robust und technisch spannend ist. Meine Interessen umfassen künstliche Intelligenz, Spracherkennung, Machine Learning und Simulation. Ich mag es, komplexe Systeme in nutzbare Anwendungen zu verwandeln, zum Beispiel durch Sprachsteuerung in einer Unity-Sandbox, die Evaluation von ASR-Systemen oder die Umsetzung von Physik- und Simulationstechniken.',
     bio:
       'Ich habe meinen Bachelor in Informatik an der Universität Innsbruck abgeschlossen und arbeite gerne an Software, die interaktiv, robust und technisch spannend ist. Meine Interessen umfassen künstliche Intelligenz, Spracherkennung, Machine Learning, und Simulation. Ich mag es, komplexe Systeme in nutzbare Anwendungen zu verwandeln, zum Beispiel durch Sprachsteuerung in einer Unity-Sandbox, die Evaluation von ASR-Systemen oder die Umsetzung von Physik- und Simulationstechniken.',
-    imageAlt: 'Profilfoto von Hannes Roed',
+    imageAlt: 'Profilfoto von Hannes Röd',
     profileCardLabel: 'Profil',
     profileCardText: 'Softwareentwicklung, KI, Simulation und interaktive Systeme.',
   },
@@ -58,12 +55,12 @@ export const contentDe = {
     experience: {
       eyebrow: 'Beruflicher Überblick',
       title: 'Erfahrung',
-      description: 'Strukturierte Platzhalter für Praktika, Berufserfahrung, Forschungskooperationen und studentische Tätigkeiten.',
+      description: 'Praktische Stationen aus Softwareentwicklung, IT-Support, Produktion und Kundenservice.',
     },
     education: {
       eyebrow: 'Akademisches Profil',
       title: 'Ausbildung',
-      description: 'Ausbildung und Zertifikate sind als wiederverwendbare Timeline-Einträge aufgebaut und lassen sich einfach erweitern.',
+      description: 'Mein Weg von der technischen Oberschule bis zum Bachelorstudium in Informatik.',
     },
     blog: {
       eyebrow: 'Optionale Texte',
@@ -102,7 +99,7 @@ export const contentDe = {
     bachelorThesis: {
       title: 'Bachelorarbeit: Sprachgesteuerte LEGO-Sandbox',
       description:
-        'Eine Unity-Sandbox zum Bauen von LEGO-ähnlichen Modellen mit Sprachbefehlen, inklusive ASR-Evaluation, Interaktionsaufgaben, Logging und nutzerorientierter Prototypenarbeit.',
+        'Für meine Bachelorarbeit habe ich in Unity eine 3D-Baustein-Sandbox gebaut, in der Steine per Sprache ausgewählt, platziert, gedreht, gruppiert und eingefärbt werden können. Die Spracherkennung läuft vollständig offline. Verglichen habe ich 16 Modelle aus den Familien Vosk/Kaldi, Whisper und Wav2Vec 2.0 anhand von Word Error Rate, Real-Time-Factor und 2,71 Stunden Audio aus meiner Nutzerstudie.',
       artifacts: {
         thesis: 'Thesis öffnen',
         presentation: 'Präsentation öffnen',
@@ -175,7 +172,7 @@ export const contentDe = {
     plantHealth: {
       title: 'Plant Health Monitoring',
       description:
-        'Ein Software-Engineering-Teamprojekt zur Pflanzenueberwachung mit rollenbasierten Dashboards, Sensorstationsverwaltung, Messwertansichten, Bildergalerien, Audit-Logs und Hardwaredokumentation.',
+        'In diesem Software-Engineering-Teamprojekt habe ich eine Anwendung zur Pflanzenüberwachung mitentwickelt. React-Frontend, Spring-Boot-Backend und SQL-Datenmodell verbinden Pflanzen, Sensorstationen und Messwerte. Dazu kommen rollenbasierte Ansichten, Audit-Log und Arduino-Hardware.',
       images: {
         landing: 'Landing Page von Plant Health',
         login: 'Login-Seite von Plant Health',
@@ -195,7 +192,7 @@ export const contentDe = {
     physicallyBasedSimulation: {
       title: 'Physically Based Simulation: Cloth Simulation',
       description:
-        'Ein Masterprojekt zu Physically Based Simulation mit Fokus auf Cloth-Simulation, Konzepten, Implementierungsdetails und einem gerenderten Demo-Video.',
+        'Gemeinsam mit Martin Berktold habe ich in C++ einen Mass-Spring-Simulator für Oszillatoren, Doppelpendel, Kollisionen und ein 15 × 10 großes Stoffgitter umgesetzt. Implementiert sind Forward Euler, Symplectic Euler und Leapfrog sowie Bodenkollisionen mit Penalty Forces und Velocity Clamping.',
       artifacts: {
         clothSimulation: 'Cloth-Simulation-PDF oeffnen',
       },
@@ -204,9 +201,9 @@ export const contentDe = {
       },
     },
     currentTopicsComputerScience: {
-      title: 'Aktuelle Themen der Informatik',
+      title: 'Scene Understanding',
       description:
-        'Ein Master-Praesentationsprojekt zu einem aktuellen Informatikthema mit strukturierten Folien, visuellem Material und technischer Diskussion.',
+        'Gemeinsam mit Adam Pescoller habe ich in Unity ein System gebaut, das Kamerabilder in eine abfragbare Szenenbeschreibung übersetzt. YOLO12s läuft über die Unity Inference Engine; aus den Bounding Boxes entsteht ein Graph mit räumlichen Beziehungen. Llama 3.2 1B beantwortet darüber via UnityLLM Fragen in natürlicher Sprache.',
       artifacts: {
         presentation: 'Praesentation oeffnen',
       },
@@ -220,7 +217,7 @@ export const contentDe = {
     lowPowerSystemDesign: {
       title: 'Low Power System Design: Thermal Sensor Station',
       description:
-        'Ein Embedded-Systems-Projekt fuer eine Thermal-Sensor-Station mit ESP32-C6, ausgelegt auf moeglichst niedrigen Energieverbrauch fuer abgelegene Standorte.',
+        'Gemeinsam mit Manuel Reichegger habe ich eine energiesparende Temperaturmessstation mit ESP32-C6, 15-kΩ-NTC-Thermistor und 12-Bit-ADC entwickelt. Der Controller wacht alle 30 Sekunden aus dem Deep Sleep auf, speichert die Messwerte im RTC-Speicher und überträgt zehn Werte gesammelt per WLAN.',
       artifacts: {
         proposal: 'Proposal oeffnen',
       },
@@ -231,7 +228,7 @@ export const contentDe = {
     mixedReality: {
       title: 'Mixed Reality: Kitchen Countdown',
       description:
-        'Ein Meta-Quest-3-Multiplayer-Mixed-Reality-Spiel in Unity mit geteilter Interaktion, raeumlichem Gameplay und einer kuechenthematischen Countdown-Challenge.',
+        'Kitchen Countdown entstand in einer Projektwoche als Multiplayer-Spiel für die Meta Quest 3. In Unity haben wir eine Mixed-Reality-Küche gebaut, in der mehrere Spieler Rezepte unter Zeitdruck abarbeiten. Die größten Herausforderungen waren die Synchronisation der Headsets, WLAN-Stabilität und Latenz.',
       artifacts: {
         presentation: 'Projekt-PDF oeffnen',
       },
@@ -289,43 +286,64 @@ export const contentDe = {
     },
   },
   experience: {
-    internship: {
-      title: 'Software-Engineering-Praktikum',
-      organization: 'Unternehmensname',
-      period: 'Daten ergänzen',
-      description: 'Platzhalter für Aufgaben im Praktikum, technische Beiträge, Teamkontext und messbare Ergebnisse.',
-      tags: ['Praktikum', 'Software Engineering'],
+    vvt: {
+      title: 'KundenCenter · Praktikum',
+      organization: 'Verkehrsverbund Tirol, Innsbruck',
+      period: 'Sommer 2025',
+      description: 'Mitarbeit im KundenCenter und Einblick in die serviceorientierten Abläufe des öffentlichen Verkehrs.',
+      tags: ['Kundenservice', 'Öffentlicher Verkehr'],
     },
-    studentDeveloper: {
-      title: 'Studentische Entwicklerrolle',
-      organization: 'Organisation',
-      period: 'Daten ergänzen',
-      description: 'Platzhalter für studentische Jobs, Forschungsunterstützung, Tooling, Tutorien oder produktive Beiträge.',
-      tags: ['Studentischer Job', 'Entwicklung'],
+    gkn: {
+      title: 'Produktion',
+      organization: 'GKN Driveline & GKN Sinter Metals',
+      period: '2021–2023',
+      description: 'Mitarbeit in der Produktion während mehrerer Sommer in Bruneck und Sand in Taufers.',
+      tags: ['Produktion', 'Praxis'],
     },
-    researchCollaboration: {
-      title: 'Forschungs- oder Projektkooperation',
-      organization: 'Labor oder Team',
-      period: 'Daten ergänzen',
-      description: 'Platzhalter für akademische, KI-, Simulations- oder Game-Development-Kooperationen.',
-      tags: ['Forschung', 'Kooperation'],
+    engl: {
+      title: 'Softwareentwicklung · Praktikum',
+      organization: 'Engl GmbH, Sand in Taufers',
+      period: '2020',
+      description: 'Erste praktische Berufserfahrung in der Softwareentwicklung im Januar und Sommer 2020.',
+      tags: ['Softwareentwicklung', 'Praktikum'],
+    },
+    zirkonzahn: {
+      title: 'IT-Support · Praktikum',
+      organization: 'Zirkonzahn, Gais',
+      period: '2019',
+      description: 'Unterstützung im IT-Support und Einblick in den technischen Unternehmensalltag.',
+      tags: ['IT-Support', 'Praktikum'],
+    },
+    elektrisola: {
+      title: 'Fertigungshelfer · Praktikum',
+      organization: 'Elektrisola, Sand in Taufers',
+      period: '2018',
+      description: 'Sommerpraktikum als Fertigungshelfer.',
+      tags: ['Fertigung', 'Praktikum'],
     },
   },
   education: {
     bachelorComputerScience: {
       title: 'Bachelor in Informatik',
       organization: 'Universität Innsbruck',
-      period: 'Abgeschlossen',
+      period: '2021–2024',
       description:
         'Akademische Grundlage in Informatik, Software Engineering, Algorithmen, Systemen, künstlicher Intelligenz und interaktiven Technologien.',
       tags: ['Informatik', 'Universität'],
     },
-    futureCredential: {
-      title: 'Zukünftige Zertifizierung oder Ausbildung',
-      organization: 'Institution',
-      period: 'Daten ergänzen',
-      description: 'Platzhalter für zukünftige Abschlüsse, berufliche Zertifikate oder spezialisierte Weiterbildungen.',
-      tags: ['Zertifikat', 'Zukunft'],
+    tfoBrixen: {
+      title: 'Fachrichtung Informatik',
+      organization: 'Technische Fachoberschule Brixen',
+      period: '2018–2021',
+      description: 'Technische Ausbildung mit Schwerpunkt Informatik.',
+      tags: ['Informatik', 'Technische Ausbildung'],
+    },
+    tfoBruneck: {
+      title: 'Technische Fachoberschule',
+      organization: 'Bruneck',
+      period: '2016–2018',
+      description: 'Grundlagen der technischen Ausbildung.',
+      tags: ['Technik', 'Ausbildung'],
     },
   },
   blogPosts: {
@@ -346,6 +364,10 @@ export const contentDe = {
     email: {
       label: 'E-Mail',
       value: 'roedhannes@gmail.com',
+    },
+    phone: {
+      label: 'Telefon',
+      value: '+39 347 645 2458',
     },
     github: {
       label: 'GitHub',

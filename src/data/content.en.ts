@@ -3,27 +3,24 @@ export const contentEn = {
   languageToggleLabel: 'Switch language',
   navItems: [
     { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
     { label: 'Experience', href: '#experience' },
     { label: 'Education', href: '#education' },
-    { label: 'Blog', href: '#blog' },
     { label: 'Contact', href: '#contact' },
   ],
   profile: {
-    name: 'Hannes Roed',
+    name: 'Hannes Röd',
     title: 'Software Engineer',
     location: 'Innsbruck, Austria',
     email: 'roedhannes@gmail.com',
     githubValue: 'https://github.com/Hannes1000',
     linkedinValue: 'linkedin.com/in/your-linkedin',
-    heroEyebrow: 'Available for software engineering, AI, and game development roles',
+    heroEyebrow: 'Computer Science · Innsbruck / South Tyrol',
     intro:
-      'Computer Science graduate building interactive systems at the intersection of software engineering, artificial intelligence, simulation, and games.',
+      'I completed my Bachelor’s degree in Computer Science at the University of Innsbruck and enjoy building software that is interactive, robust, and technically engaging. My interests include artificial intelligence, speech recognition, machine learning, and simulation. I like turning complex systems into usable applications—for example through voice control in a Unity sandbox, the evaluation of ASR systems, or the implementation of physics and simulation techniques.',
     bio:
       'I hold a Bachelor degree in Computer Science from the University of Innsbruck and focus on software that feels interactive, robust, and technically ambitious. My interests span artificial intelligence, speech recognition, machine learning, game development, and simulation. I enjoy turning complex systems into usable experiences, whether that means integrating speech commands into a Unity sandbox, evaluating ASR systems, or implementing physics and fluid simulation techniques.',
-    imageAlt: 'Hannes Roed profile portrait',
+    imageAlt: 'Hannes Röd profile portrait',
     profileCardLabel: 'Profile',
     profileCardText: 'Software engineering, AI, simulation, and interactive systems.',
   },
@@ -58,12 +55,12 @@ export const contentEn = {
     experience: {
       eyebrow: 'Professional timeline',
       title: 'Experience',
-      description: 'Structured placeholders for internships, work experience, research collaborations, and student jobs.',
+      description: 'Practical experience in software development, IT support, manufacturing, and customer service.',
     },
     education: {
       eyebrow: 'Academic profile',
       title: 'Education',
-      description: 'Education and certification entries are built as reusable timeline items so future credentials are easy to add.',
+      description: 'My path from technical high school to a Bachelor’s degree in Computer Science.',
     },
     blog: {
       eyebrow: 'Optional writing',
@@ -102,7 +99,7 @@ export const contentEn = {
     bachelorThesis: {
       title: 'Bachelor Thesis: Speech-Controlled LEGO Sandbox',
       description:
-        'A Unity sandbox for building LEGO-style models with speech commands, including ASR evaluation, interaction tasks, logging, and user-facing prototype work.',
+        'For my bachelor thesis, I built a 3D brick-building sandbox in Unity where bricks can be selected, placed, rotated, grouped, and coloured using speech. Recognition runs fully offline. I compared 16 models from Vosk/Kaldi, Whisper, and Wav2Vec 2.0 using Word Error Rate, Real-Time Factor, and 2.71 hours of audio from my user study.',
       artifacts: {
         thesis: 'Open thesis',
         presentation: 'Open presentation',
@@ -175,7 +172,7 @@ export const contentEn = {
     plantHealth: {
       title: 'Plant Health Monitoring',
       description:
-        'A software engineering team project for monitoring plants with role-based dashboards, sensor station management, measurement views, image galleries, audit logs, and hardware documentation.',
+        'In this software engineering team project, I helped develop an application for monitoring plants. A React front end, Spring Boot back end, and SQL data model connect plants, sensor stations, and measurements. It also includes role-based views, an audit log, and Arduino hardware.',
       images: {
         landing: 'Plant Health landing page',
         login: 'Plant Health login page',
@@ -195,7 +192,7 @@ export const contentEn = {
     physicallyBasedSimulation: {
       title: 'Physically Based Simulation: Cloth Simulation',
       description:
-        'A master-level physically based simulation project focused on cloth simulation concepts, implementation details, and a rendered cloth demo.',
+        'Together with Martin Berktold, I implemented a mass-spring simulator in C++ for oscillators, double pendulums, collisions, and a 15 × 10 cloth grid. It includes Forward Euler, Symplectic Euler, and Leapfrog, plus ground collisions using penalty forces and velocity clamping.',
       artifacts: {
         clothSimulation: 'Open cloth simulation PDF',
       },
@@ -204,9 +201,9 @@ export const contentEn = {
       },
     },
     currentTopicsComputerScience: {
-      title: 'Current Topics in Computer Science',
+      title: 'Scene Understanding',
       description:
-        'A master-level presentation project exploring a current computer science topic through structured slides, visual material, and technical discussion.',
+        'Together with Adam Pescoller, I built a Unity system that turns camera images into a queryable scene description. YOLO12s runs through the Unity Inference Engine; the bounding boxes form a graph with spatial relations. Llama 3.2 1B answers natural-language questions about it through UnityLLM.',
       artifacts: {
         presentation: 'Open presentation',
       },
@@ -220,7 +217,7 @@ export const contentEn = {
     lowPowerSystemDesign: {
       title: 'Low Power System Design: Thermal Sensor Station',
       description:
-        'An embedded systems project for an ESP32-C6 thermal sensor station, designed around low power consumption for deployment in remote locations.',
+        'Together with Manuel Reichegger, I developed a low-power temperature sensing station using an ESP32-C6, a 15 kΩ NTC thermistor, and the 12-bit ADC. The controller wakes from deep sleep every 30 seconds, keeps readings in RTC memory, and transmits ten measurements together over Wi-Fi.',
       artifacts: {
         proposal: 'Open proposal',
       },
@@ -231,7 +228,7 @@ export const contentEn = {
     mixedReality: {
       title: 'Mixed Reality: Kitchen Countdown',
       description:
-        'A Meta Quest 3 multiplayer mixed reality game built in Unity, combining shared interaction, spatial gameplay, and a kitchen-themed countdown challenge.',
+        'Kitchen Countdown was built during a project week as a multiplayer game for Meta Quest 3. In Unity, we created a mixed-reality kitchen where several players complete recipes against the clock. The main challenges were headset synchronisation, Wi-Fi stability, and latency.',
       artifacts: {
         presentation: 'Open project PDF',
       },
@@ -289,43 +286,64 @@ export const contentEn = {
     },
   },
   experience: {
-    internship: {
-      title: 'Software Engineering Internship',
-      organization: 'Company Name',
-      period: 'Add dates',
-      description: 'Placeholder for internship responsibilities, technical achievements, team context, and measurable results.',
-      tags: ['Internship', 'Software Engineering'],
+    vvt: {
+      title: 'Customer Centre · Internship',
+      organization: 'Verkehrsverbund Tirol, Innsbruck',
+      period: 'Summer 2025',
+      description: 'Worked in the customer centre and gained insight into service-oriented public transport operations.',
+      tags: ['Customer Service', 'Public Transport'],
     },
-    studentDeveloper: {
-      title: 'Student Developer Role',
-      organization: 'Organization Name',
-      period: 'Add dates',
-      description: 'Placeholder for student jobs, research support, tooling work, teaching assistance, or production contributions.',
-      tags: ['Student Job', 'Development'],
+    gkn: {
+      title: 'Manufacturing',
+      organization: 'GKN Driveline & GKN Sinter Metals',
+      period: '2021–2023',
+      description: 'Manufacturing work during several summers in Bruneck and Sand in Taufers.',
+      tags: ['Manufacturing', 'Practical Work'],
     },
-    researchCollaboration: {
-      title: 'Research or Project Collaboration',
-      organization: 'Lab or Team Name',
-      period: 'Add dates',
-      description: 'Placeholder for academic, AI, simulation, or game-development collaborations that should appear in the CV timeline.',
-      tags: ['Research', 'Collaboration'],
+    engl: {
+      title: 'Software Development · Internship',
+      organization: 'Engl GmbH, Sand in Taufers',
+      period: '2020',
+      description: 'First professional software-development experience in January and summer 2020.',
+      tags: ['Software Development', 'Internship'],
+    },
+    zirkonzahn: {
+      title: 'IT Support · Internship',
+      organization: 'Zirkonzahn, Gais',
+      period: '2019',
+      description: 'Supported IT operations and gained insight into day-to-day technical work in a company.',
+      tags: ['IT Support', 'Internship'],
+    },
+    elektrisola: {
+      title: 'Manufacturing Assistant · Internship',
+      organization: 'Elektrisola, Sand in Taufers',
+      period: '2018',
+      description: 'Summer internship as a manufacturing assistant.',
+      tags: ['Manufacturing', 'Internship'],
     },
   },
   education: {
     bachelorComputerScience: {
       title: 'Bachelor Degree in Computer Science',
       organization: 'University of Innsbruck',
-      period: 'Completed',
+      period: '2021–2024',
       description:
         'Academic foundation in computer science, software engineering, algorithms, systems, artificial intelligence, and interactive technologies.',
       tags: ['Computer Science', 'University'],
     },
-    futureCredential: {
-      title: 'Future Certification or Degree',
-      organization: 'Institution Name',
-      period: 'Add dates',
-      description: 'Placeholder for future degrees, professional certifications, or specialized training.',
-      tags: ['Certification', 'Future'],
+    tfoBrixen: {
+      title: 'Computer Science Programme',
+      organization: 'Technical High School Brixen',
+      period: '2018–2021',
+      description: 'Technical education with a focus on computer science.',
+      tags: ['Computer Science', 'Technical Education'],
+    },
+    tfoBruneck: {
+      title: 'Technical High School',
+      organization: 'Bruneck',
+      period: '2016–2018',
+      description: 'Foundations of technical education.',
+      tags: ['Technology', 'Education'],
     },
   },
   blogPosts: {
@@ -346,6 +364,10 @@ export const contentEn = {
     email: {
       label: 'Email',
       value: 'roedhannes@gmail.com',
+    },
+    phone: {
+      label: 'Phone',
+      value: '+39 347 645 2458',
     },
     github: {
       label: 'GitHub',

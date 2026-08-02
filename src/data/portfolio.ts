@@ -5,6 +5,7 @@ import {
   Github,
   Mail,
   Microscope,
+  Phone,
   Rocket,
   Settings2,
   Sparkles,
@@ -28,10 +29,10 @@ export type ProjectId =
   | 'fruitShop'
   | 'quisepp'
   | 'snmpTool';
-export type ExperienceId = 'internship' | 'studentDeveloper' | 'researchCollaboration';
-export type EducationId = 'bachelorComputerScience' | 'futureCredential';
+export type ExperienceId = 'vvt' | 'gkn' | 'engl' | 'zirkonzahn' | 'elektrisola';
+export type EducationId = 'bachelorComputerScience' | 'tfoBrixen' | 'tfoBruneck';
 export type BlogPostId = 'speechInterfaces' | 'simulationSystems' | 'learningNext';
-export type ContactLinkId = 'email' | 'github' | 'linkedin' | 'location';
+export type ContactLinkId = 'email' | 'phone' | 'github' | 'linkedin' | 'location';
 
 export type SkillGroup = {
   id: SkillGroupId;
@@ -78,6 +79,7 @@ export type ContactLink = {
 export const profileAssets = {
   cvUrl: new URL('../../ressources/cv_hannes_roed.pdf', import.meta.url).href,
   imageUrl: new URL('../../ressources/profile_picture.png', import.meta.url).href,
+  backgroundUrl: new URL('../../ressources/background_profile_image.jpg', import.meta.url).href,
 };
 
 export const skillGroups: SkillGroup[] = [
@@ -90,7 +92,7 @@ export const skillGroups: SkillGroup[] = [
 export const projects: Project[] = [
   {
     id: 'bachelorThesis',
-    technologies: ['Unity', 'C#', 'Speech Recognition', 'ASR', 'UX Research'],
+    technologies: ['Unity', 'C#', 'Vosk / Kaldi', 'Whisper', 'Wav2Vec 2.0', 'WER / RTF'],
     artifacts: [
       {
         id: 'thesis',
@@ -263,7 +265,7 @@ export const projects: Project[] = [
   },
   {
     id: 'plantHealth',
-    technologies: ['Software Engineering', 'IoT', 'Dashboard', 'Team Project'],
+    technologies: ['React', 'Spring Boot', 'SQL', 'Arduino', 'Role-based Access', 'IoT'],
     sourceUrl: 'https://git.uibk.ac.at/informatik/qe/swess23/group2/g2t2.git',
     images: [
       {
@@ -323,7 +325,7 @@ export const projects: Project[] = [
   },
   {
     id: 'currentTopicsComputerScience',
-    technologies: ['Computer Science', 'Research Topics', 'Presentation', 'Master Project'],
+    technologies: ['Unity', 'YOLO12s', 'Unity Inference Engine', 'UnityLLM', 'Llama 3.2 1B', 'Scene Graphs'],
     artifacts: [
       {
         id: 'presentation',
@@ -352,7 +354,7 @@ export const projects: Project[] = [
   },
   {
     id: 'lowPowerSystemDesign',
-    technologies: ['ESP32-C6', 'Embedded Systems', 'Low Power', 'Thermal Sensing'],
+    technologies: ['ESP32-C6', '12-bit ADC', 'Deep Sleep', 'RTC Memory', 'Wi-Fi 6', 'NTC Thermistor'],
     artifacts: [
       {
         id: 'proposal',
@@ -369,7 +371,7 @@ export const projects: Project[] = [
   },
   {
     id: 'mixedReality',
-    technologies: ['Unity', 'Meta Quest 3', 'Mixed Reality', 'Multiplayer'],
+    technologies: ['Unity', 'C#', 'Meta Quest 3', 'Mixed Reality', 'Multiplayer'],
     artifacts: [
       {
         id: 'presentation',
@@ -387,7 +389,7 @@ export const projects: Project[] = [
   },
   {
     id: 'physicallyBasedSimulation',
-    technologies: ['Physics Simulation', 'Cloth Simulation', 'Computer Graphics', 'Master Project'],
+    technologies: ['C++', 'Mass-Spring', 'Forward / Symplectic Euler', 'Leapfrog', 'Collision Response', 'Cloth Simulation'],
     artifacts: [
       {
         id: 'clothSimulation',
@@ -519,14 +521,17 @@ export const projects: Project[] = [
 ];
 
 export const experienceItems: TimelineItem<ExperienceId>[] = [
-  { id: 'internship' },
-  { id: 'studentDeveloper' },
-  { id: 'researchCollaboration' },
+  { id: 'vvt' },
+  { id: 'gkn' },
+  { id: 'engl' },
+  { id: 'zirkonzahn' },
+  { id: 'elektrisola' },
 ];
 
 export const educationItems: TimelineItem<EducationId>[] = [
   { id: 'bachelorComputerScience' },
-  { id: 'futureCredential' },
+  { id: 'tfoBrixen' },
+  { id: 'tfoBruneck' },
 ];
 
 export const blogPosts: BlogPost[] = [
@@ -537,6 +542,7 @@ export const blogPosts: BlogPost[] = [
 
 export const contactLinks: ContactLink[] = [
   { id: 'email', href: 'mailto:roedhannes@gmail.com', icon: Mail },
+  { id: 'phone', href: 'tel:+393476452458', icon: Phone },
   { id: 'github', href: 'https://github.com/Hannes1000', icon: Github },
   { id: 'location', href: '#contact', icon: Rocket },
 ];
