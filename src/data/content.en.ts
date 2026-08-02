@@ -15,7 +15,7 @@ export const contentEn = {
     email: 'roedhannes@gmail.com',
     githubValue: 'https://github.com/Hannes1000',
     linkedinValue: 'linkedin.com/in/your-linkedin',
-    heroEyebrow: 'Computer Science · Innsbruck / South Tyrol',
+    heroEyebrow: 'Computer Science · Innsbruck / Ahrntal',
     intro:
       'I completed my Bachelor’s degree in Computer Science at the University of Innsbruck and enjoy building software that is interactive, robust, and technically engaging. My interests include artificial intelligence, speech recognition, machine learning, and simulation. I like turning complex systems into usable applications—for example through voice control in a Unity sandbox, the evaluation of ASR systems, or the implementation of physics and simulation techniques.',
     bio:
@@ -290,7 +290,7 @@ export const contentEn = {
       title: 'Customer Centre · Internship',
       organization: 'Verkehrsverbund Tirol, Innsbruck',
       period: 'Summer 2025',
-      description: 'Worked in the customer centre and gained insight into service-oriented public transport operations.',
+      description: 'Supported customers in the service centre and gained insight into service-oriented public transport operations.',
       tags: ['Customer Service', 'Public Transport'],
     },
     gkn: {
@@ -311,14 +311,14 @@ export const contentEn = {
       title: 'IT Support · Internship',
       organization: 'Zirkonzahn, Gais',
       period: '2019',
-      description: 'Supported IT operations and gained insight into day-to-day technical work in a company.',
+      description: 'Supported IT operations by activating dongles, recording and creating support tickets, and helping develop technical solutions.',
       tags: ['IT Support', 'Internship'],
     },
     elektrisola: {
       title: 'Manufacturing Assistant · Internship',
       organization: 'Elektrisola, Sand in Taufers',
       period: '2018',
-      description: 'Summer internship as a manufacturing assistant.',
+      description: 'Summer internship as a manufacturing assistant in the enamelling department, supporting production processes, material preparation, and ongoing quality checks.',
       tags: ['Manufacturing', 'Internship'],
     },
   },
@@ -326,24 +326,24 @@ export const contentEn = {
     bachelorComputerScience: {
       title: 'Bachelor Degree in Computer Science',
       organization: 'University of Innsbruck',
-      period: '2021–2024',
+      period: '2021–2025',
       description:
         'Academic foundation in computer science, software engineering, algorithms, systems, artificial intelligence, and interactive technologies.',
       tags: ['Computer Science', 'University'],
     },
     tfoBrixen: {
-      title: 'Computer Science Programme',
-      organization: 'Technical High School Brixen',
+      title: 'TFO Brixen',
+      organization: 'Technological High School Brixen · Computer Science programme',
       period: '2018–2021',
-      description: 'Technical education with a focus on computer science.',
-      tags: ['Computer Science', 'Technical Education'],
+      description: 'Focused on software development, databases, systems and networks, network programming, telecommunications, web services, project planning, and technical documentation.',
+      tags: ['Computer Science', 'Systems & Networks', 'Databases', 'Web Development'],
     },
     tfoBruneck: {
-      title: 'Technical High School',
-      organization: 'Bruneck',
+      title: 'TFO Bruneck',
+      organization: 'Technological High School Bruneck · technical biennium',
       period: '2016–2018',
-      description: 'Foundations of technical education.',
-      tags: ['Technology', 'Education'],
+      description: 'Technical biennium covering mathematics, physics, chemistry, technical drawing, applied technologies, and scientific work, followed by a move to the Computer Science programme in Brixen.',
+      tags: ['Technology', 'Natural Sciences', 'Technical Drawing'],
     },
   },
   blogPosts: {

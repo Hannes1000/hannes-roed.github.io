@@ -272,7 +272,6 @@ function Hero({ content }: { content: SiteContent }) {
               <div className="relative flex h-full flex-col justify-between rounded-lg border border-white/30 p-6">
                 <div className="flex items-center justify-between">
                   <span className="rounded-lg bg-white/10 px-3 py-2 text-sm font-semibold backdrop-blur">{content.profile.profileCardLabel}</span>
-                  <span className="h-3 w-3 rounded-full bg-accent-400" />
                 </div>
                 <div className="animate-float">
                   <div className="mx-auto h-48 w-48 overflow-hidden rounded-full border border-white/30 bg-white/10 shadow-2xl backdrop-blur">

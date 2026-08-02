@@ -79,7 +79,7 @@ export type ContactLink = {
 export const profileAssets = {
   cvUrl: new URL('../../ressources/cv_hannes_roed.pdf', import.meta.url).href,
   imageUrl: new URL('../../ressources/profile_picture.png', import.meta.url).href,
-  backgroundUrl: new URL('../../ressources/background_profile_image.jpg', import.meta.url).href,
+  backgroundUrl: new URL('../../ressources/background_profile_image.webp', import.meta.url).href,
 };
 
 export const skillGroups: SkillGroup[] = [

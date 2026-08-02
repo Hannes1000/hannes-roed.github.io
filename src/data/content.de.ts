@@ -15,7 +15,7 @@ export const contentDe = {
     email: 'roedhannes@gmail.com',
     githubValue: 'https://github.com/Hannes1000',
     linkedinValue: 'linkedin.com/in/your-linkedin',
-    heroEyebrow: 'Informatik · Innsbruck / Südtirol',
+    heroEyebrow: 'Informatik · Innsbruck / Ahrntal',
     intro:
       'Ich habe meinen Bachelor in Informatik an der Universität Innsbruck abgeschlossen und arbeite gerne an Software, die interaktiv, robust und technisch spannend ist. Meine Interessen umfassen künstliche Intelligenz, Spracherkennung, Machine Learning und Simulation. Ich mag es, komplexe Systeme in nutzbare Anwendungen zu verwandeln, zum Beispiel durch Sprachsteuerung in einer Unity-Sandbox, die Evaluation von ASR-Systemen oder die Umsetzung von Physik- und Simulationstechniken.',
     bio:
@@ -287,10 +287,10 @@ export const contentDe = {
   },
   experience: {
     vvt: {
-      title: 'KundenCenter · Praktikum',
+      title: 'KundInnenCenter · Praktikum',
       organization: 'Verkehrsverbund Tirol, Innsbruck',
       period: 'Sommer 2025',
-      description: 'Mitarbeit im KundenCenter und Einblick in die serviceorientierten Abläufe des öffentlichen Verkehrs.',
+      description: 'Unterstützung im KundInnenCenter und Einblick in die serviceorientierten Abläufe des öffentlichen Verkehrs.',
       tags: ['Kundenservice', 'Öffentlicher Verkehr'],
     },
     gkn: {
@@ -311,14 +311,14 @@ export const contentDe = {
       title: 'IT-Support · Praktikum',
       organization: 'Zirkonzahn, Gais',
       period: '2019',
-      description: 'Unterstützung im IT-Support und Einblick in den technischen Unternehmensalltag.',
+      description: 'Unterstützung im IT-Support: Aktivierung von Dongles, Aufnahme und Erstellung von Support-Tickets sowie Mitarbeit an technischen Lösungen.',
       tags: ['IT-Support', 'Praktikum'],
     },
     elektrisola: {
       title: 'Fertigungshelfer · Praktikum',
       organization: 'Elektrisola, Sand in Taufers',
       period: '2018',
-      description: 'Sommerpraktikum als Fertigungshelfer.',
+      description: 'Sommerpraktikum als Fertigungshelfer in der Emailliererei mit Unterstützung bei Produktionsabläufen, Materialbereitstellung und laufenden Qualitätskontrollen.',
       tags: ['Fertigung', 'Praktikum'],
     },
   },
@@ -326,24 +326,24 @@ export const contentDe = {
     bachelorComputerScience: {
       title: 'Bachelor in Informatik',
       organization: 'Universität Innsbruck',
-      period: '2021–2024',
+      period: '2021–2025',
       description:
         'Akademische Grundlage in Informatik, Software Engineering, Algorithmen, Systemen, künstlicher Intelligenz und interaktiven Technologien.',
       tags: ['Informatik', 'Universität'],
     },
     tfoBrixen: {
-      title: 'Fachrichtung Informatik',
-      organization: 'Technische Fachoberschule Brixen',
+      title: 'TFO Brixen',
+      organization: 'Technologische Fachoberschule Brixen · Fachrichtung Informatik',
       period: '2018–2021',
-      description: 'Technische Ausbildung mit Schwerpunkt Informatik.',
-      tags: ['Informatik', 'Technische Ausbildung'],
+      description: 'Schwerpunkte in Softwareentwicklung, Datenbanken, Systemen und Netzwerken, Netzwerkprogrammierung, Telekommunikation, Webservices, Projektplanung und technischer Dokumentation.',
+      tags: ['Informatik', 'Systeme & Netze', 'Datenbanken', 'Webentwicklung'],
     },
     tfoBruneck: {
-      title: 'Technische Fachoberschule',
-      organization: 'Bruneck',
+      title: 'TFO Bruneck',
+      organization: 'Technologische Fachoberschule Bruneck · technisches Biennium',
       period: '2016–2018',
-      description: 'Grundlagen der technischen Ausbildung.',
-      tags: ['Technik', 'Ausbildung'],
+      description: 'Technisches Biennium mit Grundlagen in Mathematik, Physik, Chemie, technischem Zeichnen, angewandten Technologien und wissenschaftlichem Arbeiten; anschließend Wechsel in die Fachrichtung Informatik nach Brixen.',
+      tags: ['Technik', 'Naturwissenschaften', 'Technisches Zeichnen'],
     },
   },
   blogPosts: {
