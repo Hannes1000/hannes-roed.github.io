@@ -114,9 +114,9 @@ const copy = {
     projectsEyebrow: 'Ausgewählte Arbeiten',
     projectsTitle: 'Portfolio-Projekte',
     projectsIntro:
-      'Statt alles aufzulisten, zeige ich hier die Arbeiten, die meine Interessen am besten verbinden: Interaktion, robuste Systeme und ein Ergebnis, das man sehen oder messen kann.',
+      'Hier sind die Projekte, an denen man am besten sieht, woran ich gerne arbeite. Bei jedem geht es um ein konkretes technisches Problem – von Spracherkennung in Unity über Embedded Hardware bis zu Mixed Reality und Physiksimulation.',
     projectIndexLabel: 'Direkt zu einem Projekt springen',
-    detailLabel: 'Was daran interessant war',
+    detailLabel: 'Technik & Ergebnis',
     technologiesLabel: 'Verwendete Technologien',
     pathEyebrow: 'Werdegang',
     pathTitle: 'Nicht ganz geradlinig. Dafür praktisch.',
@@ -165,9 +165,9 @@ const copy = {
     projectsEyebrow: 'Selected work',
     projectsTitle: 'Portfolio projects',
     projectsIntro:
-      'Rather than list everything, these are the projects that best connect my interests: interaction, robust systems, and results you can see or measure.',
+      'These projects show best what I enjoy working on. Each one tackles a concrete technical problem – from speech recognition in Unity and embedded hardware to mixed reality and physics simulation.',
     projectIndexLabel: 'Jump directly to a project',
-    detailLabel: 'What made it interesting',
+    detailLabel: 'Technology & result',
     technologiesLabel: 'Technologies used',
     pathEyebrow: 'Background',
     pathTitle: 'Not perfectly linear. Definitely practical.',
@@ -195,14 +195,14 @@ const projects: Project[] = [
     title: 'Speech Controlled Brick Building',
     category: { de: 'Bachelorarbeit · Unity & ASR', en: 'Bachelor thesis · Unity & ASR' },
     description: {
-      de: 'Eine virtuelle Bausteinwelt, die sich mit natürlicher Sprache steuern lässt. Dafür habe ich Vosk/Kaldi, Whisper und Wav2Vec 2.0 für Offline-Echtzeitnutzung verglichen und eine Nutzerstudie durchgeführt.',
-      en: 'A virtual brick-building environment controlled with natural speech. I compared Vosk/Kaldi, Whisper, and Wav2Vec 2.0 for offline real-time use and conducted a user study.',
+      de: 'Für meine Bachelorarbeit habe ich in Unity eine 3D-Baustein-Sandbox gebaut. Steine lassen sich per Sprache auswählen, platzieren, drehen, gruppieren und einfärben. Die Spracherkennung läuft vollständig offline; dafür habe ich 16 Modelle aus den Familien Vosk/Kaldi, Whisper und Wav2Vec 2.0 verglichen.',
+      en: 'For my bachelor thesis, I built a 3D brick-building sandbox in Unity. Bricks can be selected, placed, rotated, grouped, and coloured using speech. Recognition runs fully offline, and I compared 16 models from the Vosk/Kaldi, Whisper, and Wav2Vec 2.0 families.',
     },
     detail: {
-      de: 'Whisper erkannte am genauesten, Wav2Vec war am schnellsten. In der Studie waren Farben zur Auswahl effizienter als Formen; ein beschriftetes Raster reduzierte Korrekturen beim Platzieren.',
-      en: 'Whisper was the most accurate, while Wav2Vec was the fastest. In the study, selecting bricks by colour was more efficient than by shape, and a labelled grid reduced repositioning.',
+      de: 'Bewertet habe ich die Modelle mit Word Error Rate und Real-Time-Factor auf Common Voice sowie mit 2,71 Stunden Audio aus meiner Nutzerstudie. Whisper war am genauesten, Wav2Vec am schnellsten. Der erkannte Text wird über eine von mir definierte Befehlssprache direkt auf Aktionen in Unity abgebildet.',
+      en: 'I evaluated the models using Word Error Rate and Real-Time Factor on Common Voice, plus 2.71 hours of audio from my user study. Whisper was the most accurate, while Wav2Vec was the fastest. A command language I designed maps recognised text directly to actions in Unity.',
     },
-    tags: ['Unity', 'C#', 'Whisper', 'Wav2Vec 2.0', 'User Study'],
+    tags: ['Unity', 'C#', 'Vosk / Kaldi', 'Whisper', 'Wav2Vec 2.0', 'WER / RTF'],
     media: {
       type: 'image',
       src: assets.thesis,
@@ -225,14 +225,14 @@ const projects: Project[] = [
     title: 'Kitchen Countdown',
     category: { de: 'Mixed Reality · Teamprojekt', en: 'Mixed reality · Team project' },
     description: {
-      de: 'Ein Multiplayer-Spiel für die Meta Quest 3, das Kochen, räumliche Interfaces und einen Countdown verbindet. Rezepte, Fortschritt und Timer werden zwischen mehreren Headsets synchronisiert.',
-      en: 'A Meta Quest 3 multiplayer game combining cooking, spatial interfaces, and a countdown. Recipes, progress, and timers are synchronised across multiple headsets.',
+      de: 'Kitchen Countdown entstand in einer Projektwoche als Multiplayer-Spiel für die Meta Quest 3. In Unity haben wir eine Mixed-Reality-Küche gebaut, in der mehrere Spieler Rezepte unter Zeitdruck abarbeiten. Fortschritt, Zutaten und Timer werden zwischen den Headsets synchronisiert.',
+      en: 'Kitchen Countdown was built during a project week as a multiplayer game for Meta Quest 3. In Unity, we created a mixed-reality kitchen where several players complete recipes against the clock. Progress, ingredients, and timers are synchronised between the headsets.',
     },
     detail: {
-      de: 'Die eigentliche Herausforderung war nicht die Szene, sondern das Zusammenspiel: stabile Synchronisation, WLAN-Latenz und eine Bedienung, die auch ohne lange Einführung verständlich bleibt.',
-      en: 'The real challenge was not the scene itself, but making everything work together: stable synchronisation, Wi-Fi latency, and controls that remain understandable without a long introduction.',
+      de: 'Am aufwendigsten war das Testen mit mehreren Headsets: instabiles WLAN, Latenz und Synchronisationsfehler waren nicht immer leicht reproduzierbar. Gleichzeitig sollte die Bedienung so klar sein, dass neue Spieler ohne lange Einführung loslegen können.',
+      en: 'Testing with several headsets took the most work: unstable Wi-Fi, latency, and synchronisation issues were not always easy to reproduce. At the same time, the controls had to be clear enough for new players to start without a long introduction.',
     },
-    tags: ['Unity', 'Meta Quest 3', 'Multiplayer', 'Spatial UX'],
+    tags: ['Unity', 'C#', 'Meta Quest 3', 'Mixed Reality', 'Multiplayer'],
     media: {
       type: 'video',
       src: assets.mixedReality,
@@ -250,14 +250,14 @@ const projects: Project[] = [
     title: 'Low-Power Sensor Station',
     category: { de: 'Embedded Systems · ESP32-C6', en: 'Embedded systems · ESP32-C6' },
     description: {
-      de: 'Eine Temperaturmessstation für abgelegene Orte. Der ESP32-C6 wacht alle 30 Sekunden auf, misst und legt sich wieder schlafen; erst zehn Messwerte später wird das WLAN aktiviert.',
-      en: 'A temperature sensing station for remote locations. The ESP32-C6 wakes every 30 seconds, takes a reading, and returns to sleep; Wi-Fi only activates after ten measurements.',
+      de: 'Gemeinsam mit Manuel Reichegger habe ich eine energiesparende Temperaturmessstation auf Basis des ESP32-C6 entwickelt. Ein 15-kΩ-NTC-Thermistor wird über den 12-Bit-ADC ausgelesen. Der Controller wacht alle 30 Sekunden kurz auf und überträgt erst nach zehn Messungen alle Werte gesammelt per WLAN.',
+      en: 'Together with Manuel Reichegger, I developed a low-power temperature sensing station based on the ESP32-C6. A 15 kΩ NTC thermistor is read through the 12-bit ADC. The controller wakes briefly every 30 seconds and only transmits the ten collected measurements over Wi-Fi at the end of a cycle.',
     },
     detail: {
-      de: 'Das Projekt war eine Übung in echten Zielkonflikten: Messgenauigkeit gegen Widerstandswerte, Zuverlässigkeit gegen Wiederholungen und Funkkomfort gegen Energieverbrauch.',
-      en: 'The project was an exercise in real trade-offs: measurement accuracy versus resistor values, reliability versus retries, and wireless convenience versus power consumption.',
+      de: 'Zwischen den Messungen liegt das System im Deep Sleep; Zähler und Messwerte bleiben im RTC-Speicher. Die Spannungsteiler-Schaltung ist nur für die Messung aktiv. Für ungültige ADC-Werte und Verbindungsfehler haben wir Wiederholungen und einen kurzen Backoff vorgesehen.',
+      en: 'The system remains in deep sleep between measurements, while counters and readings are kept in RTC memory. The voltage divider is powered only while sampling. We also added retries and a short backoff for invalid ADC readings and connection failures.',
     },
-    tags: ['ESP32-C6', 'Deep Sleep', 'ADC', 'Wi-Fi 6'],
+    tags: ['ESP32-C6', '12-bit ADC', 'Deep Sleep', 'RTC Memory', 'Wi-Fi 6', 'NTC Thermistor'],
     media: {
       type: 'image',
       src: assets.lowPower,
@@ -274,14 +274,14 @@ const projects: Project[] = [
     title: 'Scene Understanding',
     category: { de: 'Computer Vision · Szenengraphen', en: 'Computer vision · Scene graphs' },
     description: {
-      de: 'Ein System, das Objekte in einer Szene erkennt, ihre räumlichen Beziehungen als Graph beschreibt und Fragen wie „Wo ist der Truck?“ oder „Was liegt über ihm?“ beantwortbar macht.',
-      en: 'A system that detects objects in a scene, represents their spatial relationships as a graph, and makes questions such as “Where is the truck?” answerable.',
+      de: 'Gemeinsam mit Adam Pescoller habe ich in Unity ein System gebaut, das Kamerabilder in eine abfragbare Szenenbeschreibung übersetzt. YOLO12s läuft direkt über die Unity Inference Engine und liefert Klassen sowie Bounding Boxes der erkannten Objekte.',
+      en: 'Together with Adam Pescoller, I built a Unity system that turns camera images into a queryable scene description. YOLO12s runs directly through the Unity Inference Engine and returns class labels and bounding boxes for detected objects.',
     },
     detail: {
-      de: 'Interessant war die Übersetzung von Pixeln in eine abstrakte, abfragbare Darstellung – also der Schritt vom Erkennen einzelner Objekte zum Verstehen ihrer Beziehungen.',
-      en: 'The interesting part was translating pixels into an abstract, queryable representation—moving from detecting individual objects to understanding their relationships.',
+      de: 'Aus Position und Größe der Bounding Boxes erzeugen wir einen eigenen Graphen mit „links von“, „über“ und „vor“. Llama 3.2 1B beantwortet über UnityLLM Fragen zu diesem Graphen in natürlicher Sprache. Gut funktionierten die Textbeschreibungen; Grenzen zeigten sich bei breiten Objektklassen und fehlender Tiefeninformation.',
+      en: 'From the position and size of the bounding boxes, we generate our own graph using “left of”, “above”, and “in front of” relations. Llama 3.2 1B answers natural-language questions about this graph through UnityLLM. Text descriptions worked well, while broad object labels and missing depth information remained limitations.',
     },
-    tags: ['Object Detection', 'Scene Graphs', 'Computer Vision', 'NLP'],
+    tags: ['Unity', 'YOLO12s', 'Unity Inference Engine', 'UnityLLM', 'Llama 3.2 1B', 'Scene Graphs'],
     media: {
       type: 'image',
       src: assets.sceneUnderstanding,
@@ -303,14 +303,14 @@ const projects: Project[] = [
     title: 'Cloth Simulation',
     category: { de: 'Physiksimulation · Mass-Spring', en: 'Physics simulation · Mass-spring' },
     description: {
-      de: 'Ein Mass-Spring-Simulator für Oszillatoren, Pendel, Kollisionen und ein 15 × 10 großes Stoffgitter – mit Forward Euler, Symplectic Euler und Leapfrog.',
-      en: 'A mass-spring simulator for oscillators, pendulums, collisions, and a 15 × 10 cloth grid using Forward Euler, Symplectic Euler, and Leapfrog.',
+      de: 'Gemeinsam mit Martin Berktold habe ich in C++ einen Mass-Spring-Simulator umgesetzt. Damit simulieren wir einen Federoszillator, ein Doppelpendel, fallende Körper und ein 15 × 10 großes Stoffgitter aus Struktur-, Scher- und zusätzlichen Verbindungsfedern.',
+      en: 'Together with Martin Berktold, I implemented a mass-spring simulator in C++. It covers a spring oscillator, a double pendulum, falling bodies, and a 15 × 10 cloth grid made from structural, shear, and additional connecting springs.',
     },
     detail: {
-      de: 'Der Vergleich mit einer analytischen Lösung machte numerische Stabilität sichtbar: Forward Euler driftete, während Leapfrog den kleinsten Fehler zeigte.',
-      en: 'Comparing against an analytical solution made numerical stability visible: Forward Euler drifted, while Leapfrog produced the smallest error.',
+      de: 'Implementiert sind Forward Euler, Symplectic Euler und Leapfrog sowie Bodenkollisionen über Penalty Forces und Velocity Clamping. Der Vergleich mit der analytischen Lösung zeigte den Unterschied deutlich: Forward Euler wurde instabil, während Leapfrog beim Oszillator den kleinsten Fehler hatte.',
+      en: 'The implementation includes Forward Euler, Symplectic Euler, and Leapfrog, plus ground collisions using penalty forces and velocity clamping. Comparing against the analytical solution made the difference clear: Forward Euler became unstable, while Leapfrog had the lowest oscillator error.',
     },
-    tags: ['C++', 'Numerical Integration', 'Collision', 'Simulation'],
+    tags: ['C++', 'Mass-Spring', 'Forward / Symplectic Euler', 'Leapfrog', 'Collision Response', 'Cloth Simulation'],
     media: {
       type: 'video',
       src: assets.cloth,
@@ -328,14 +328,14 @@ const projects: Project[] = [
     title: 'Plant Health',
     category: { de: 'Software Engineering · Teamprojekt', en: 'Software engineering · Team project' },
     description: {
-      de: 'Eine Webanwendung zur Pflanzenüberwachung mit Sensorstationen, Messwerten, rollenbasierten Ansichten und Audit-Log – vom Hardware-Schaltplan bis zur Oberfläche.',
-      en: 'A plant-monitoring web application with sensor stations, measurements, role-based views, and an audit log—from the hardware schematic to the interface.',
+      de: 'In diesem Software-Engineering-Teamprojekt habe ich eine Webanwendung zur Pflanzenüberwachung mitentwickelt. Ein React-Frontend und ein Spring-Boot-Backend verbinden Pflanzen, Sensorstationen, Messwerte und Benutzer in einer gemeinsamen Anwendung.',
+      en: 'In this software engineering team project, I helped develop a web application for monitoring plants. A React front end and Spring Boot back end connect plants, sensor stations, measurements, and users in one application.',
     },
     detail: {
-      de: 'Hier ging es weniger um ein einzelnes Feature als um das Gesamtsystem: Rollen und Rechte, nachvollziehbare Änderungen, Hardwaredaten und eine Oberfläche für unterschiedliche Nutzergruppen.',
-      en: 'This was less about one feature than the complete system: roles and permissions, traceable changes, hardware data, and an interface for different user groups.',
+      de: 'Administratoren, Gärtner und normale Benutzer bekommen jeweils eigene Ansichten und Rechte. Dazu kommen Messwerttabellen, Bilder, ein Audit-Log und die Verwaltung der IoT-Hardware. Für mich war vor allem das Zusammenspiel aus Datenmodell, Backend, Rollenlogik und Oberfläche interessant.',
+      en: 'Administrators, gardeners, and regular users each receive their own views and permissions. The system also includes measurement tables, images, an audit log, and IoT hardware management. For me, the most interesting part was how the data model, back end, role logic, and interface had to work together.',
     },
-    tags: ['React', 'Spring Boot', 'SQL', 'IoT'],
+    tags: ['React', 'Spring Boot', 'SQL', 'Arduino', 'Role-based Access', 'IoT'],
     media: {
       type: 'image',
       src: assets.plantHealth,
