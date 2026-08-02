@@ -18,7 +18,6 @@ export type ProjectId =
   | 'bachelorThesis'
   | 'roboticsInverseKinematics'
   | 'roboticsPickAndPlace'
-  | 'distributedSystems'
   | 'memori'
   | 'plantHealth'
   | 'currentTopicsComputerScience'
@@ -180,7 +179,7 @@ export const projects: Project[] = [
   },
   {
     id: 'roboticsPickAndPlace',
-    technologies: ['Robotics', 'Pick and Place', 'Motion Planning', 'Simulation'],
+    technologies: ['CoppeliaSim', 'Franka Panda', 'Gripper Control', 'Pick and Place', 'Motion Planning', 'Collision Avoidance'],
     images: [
       {
         id: 'pickPlaceLongDemo',
@@ -196,18 +195,6 @@ export const projects: Project[] = [
       },
     ],
     accent: 'from-violet-500 to-fuchsia-500',
-  },
-  {
-    id: 'distributedSystems',
-    technologies: ['Distributed Systems', 'Systems Design', 'Fault Tolerance', 'Presentation'],
-    artifacts: [
-      {
-        id: 'presentation',
-        url: new URL('../../ressources/projects_bachelor/distributed_systems/presentation.pdf', import.meta.url).href,
-      },
-    ],
-    images: [],
-    accent: 'from-blue-500 to-indigo-500',
   },
   {
     id: 'memori',
@@ -383,6 +370,7 @@ export const projects: Project[] = [
         id: 'mixedRealityDemo',
         type: 'video',
         url: new URL('../../ressources/projects_master/mixed_reality/1.mp4', import.meta.url).href,
+        posterUrl: new URL('../../ressources/projects_master/mixed_reality/poster.jpg', import.meta.url).href,
       },
     ],
     accent: 'from-fuchsia-500 to-rose-500',
@@ -401,13 +389,14 @@ export const projects: Project[] = [
         id: 'clothSimulationDemo',
         type: 'video',
         url: new URL('../../ressources/projects_master/physically_based_simulation/1.mp4', import.meta.url).href,
+        posterUrl: new URL('../../ressources/projects_master/physically_based_simulation/poster.jpg', import.meta.url).href,
       },
     ],
     accent: 'from-slate-500 to-zinc-500',
   },
   {
     id: 'franzFotoArchiv',
-    technologies: ['Web App', 'Authentication', 'Image Archive', 'Database'],
+    technologies: ['React', 'Node.js', 'MySQL', 'Authentication', 'Digital Archive'],
     sourceUrl: 'https://github.com/Hannes1000/Foto-Archiv',
     liveUrl: 'http://3.72.107.197/',
     images: [

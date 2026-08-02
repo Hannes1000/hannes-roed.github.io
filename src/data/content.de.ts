@@ -134,20 +134,11 @@ export const contentDe = {
     roboticsPickAndPlace: {
       title: 'Robotik: Pick and Place',
       description:
-        'Ein Robotik-Projekt zu Pick-and-Place-Ablaeufen mit Objekthandling, Bewegungsplanung und simuliertem Roboterverhalten in kurzen und laengeren Demo-Videos.',
+        'In CoppeliaSim habe ich einen Franka-Panda-Roboter mit Greifer für einen automatisierten Pick-and-Place-Ablauf simuliert. Der Manipulator greift farbige Würfel auf dem Ausgangstisch, führt sie kollisionsfrei an mehreren Hindernissen vorbei und legt sie in den farblich passenden Zielbereichen ab. Die Szene verbindet Greifersteuerung, definierte Greif- und Ablageposen sowie die Planung einer vollständigen Bewegungssequenz.',
       images: {
         pickPlaceShortDemo: 'Kurzes Demo-Video zum Pick-and-Place-Roboter',
         pickPlaceLongDemo: 'Laengeres Demo-Video zum Pick-and-Place-Roboter',
       },
-    },
-    distributedSystems: {
-      title: 'Distributed-Systems-Praesentation',
-      description:
-        'Ein Bachelor-Projektartefakt zu Distributed Systems mit Fokus auf zentrale Konzepte, System-Trade-offs und die Praesentation verteilter Rechensysteme.',
-      artifacts: {
-        presentation: 'Praesentation oeffnen',
-      },
-      images: {},
     },
     memori: {
       title: 'Memori',
@@ -217,7 +208,7 @@ export const contentDe = {
     lowPowerSystemDesign: {
       title: 'Low Power System Design: Thermal Sensor Station',
       description:
-        'Gemeinsam mit Manuel Reichegger habe ich eine energiesparende Temperaturmessstation mit ESP32-C6, 15-kΩ-NTC-Thermistor und 12-Bit-ADC entwickelt. Der Controller wacht alle 30 Sekunden aus dem Deep Sleep auf, speichert die Messwerte im RTC-Speicher und überträgt zehn Werte gesammelt per WLAN.',
+        'Gemeinsam mit Manuel Reichegger habe ich eine energiesparende Temperaturmessstation mit ESP32-C6, 15-kΩ-NTC-Thermistor und 12-Bit-ADC entwickelt. Der Controller wacht alle 30 Sekunden aus dem Deep Sleep auf, speichert die Messwerte im RTC-Speicher und überträgt jeweils zehn Werte gesammelt per WLAN an eine Basisstation. Ziel war ein möglichst geringer Energieverbrauch, damit die Station auch an schwer zugänglichen Standorten mit begrenzter Stromversorgung zuverlässig eingesetzt werden kann.',
       artifacts: {
         proposal: 'Proposal oeffnen',
       },
@@ -239,7 +230,7 @@ export const contentDe = {
     franzFotoArchiv: {
       title: 'Franz Foto Archiv',
       description:
-        'Eine gehostete Fotoarchiv-Web-App mit Benutzerkonten und Galerie-Workflow, umgesetzt als größeres Schulprojekt zum Organisieren und Durchsuchen von Bildsammlungen.',
+        'Ein Webarchiv für die Fotografien meines Urgroßvaters Johann Niederkofler, eines der ersten Fotografen des Ahrntals. Die Maturaarbeit verbindet ein React-Frontend mit einem Node.js-Backend und einer MySQL-Datenbank, in der Beschreibungen zu Negativ- und Diaaufnahmen verwaltet werden. Gemeinsam mit dem Geschichtsverein St. Johann sollen die digitalisierten Bestände öffentlich zugänglich werden – für Ahnenforschung, Orts- und Familiengeschichte, Bildungsarbeit sowie die Dokumentation der kulturellen Entwicklung des Ahrntals.',
       images: {
         login: 'Login-Screenshot von Franz Foto Archiv',
         alternateLogin: 'Alternativer Login-Screenshot von Franz Foto Archiv',
@@ -254,12 +245,12 @@ export const contentDe = {
     fruitShop: {
       title: 'Fruit Shop',
       description:
-        'Ein kleiner Online-Shop-Prototyp für Obst- und Gemüseprodukte, mit Fokus auf klassische Shop-Seiten, Produktdarstellung und Checkout-ähnliche Abläufe.',
+        'Ein kleiner Online-Shop-Prototyp für Obst- und Gemüseprodukte mit klassischen Shop-Seiten, Produktdarstellung, Warenkorb und Checkout-Abläufen.',
       images: {
         home: 'Startseiten-Screenshot des Fruit Shops',
         products: 'Produktlisten-Screenshot des Fruit Shops',
         cart: 'Warenkorb-Workflow des Fruit Shops',
-        checkout: 'Checkout-ähnliche Ansicht des Fruit Shops',
+        checkout: 'Checkout-Ansicht des Fruit Shops',
       },
     },
     quisepp: {

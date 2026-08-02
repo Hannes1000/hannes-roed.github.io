@@ -134,20 +134,11 @@ export const contentEn = {
     roboticsPickAndPlace: {
       title: 'Robotics: Pick and Place',
       description:
-        'A robotics pick-and-place project demonstrating object handling, motion planning, and simulated robot behavior through short and extended demo videos.',
+        'In CoppeliaSim, I simulated a Franka Panda robot with a gripper for an automated pick-and-place workflow. The manipulator picks up coloured cubes from the source table, moves them around several obstacles without collisions, and places them in matching coloured target areas. The scene combines gripper control, defined pick and place poses, and the planning of a complete motion sequence.',
       images: {
         pickPlaceShortDemo: 'Short robotics pick-and-place demo video',
         pickPlaceLongDemo: 'Extended robotics pick-and-place demo video',
       },
-    },
-    distributedSystems: {
-      title: 'Distributed Systems Presentation',
-      description:
-        'A bachelor-level distributed systems project artifact focused on core concepts, system trade-offs, and presentation of distributed computing topics.',
-      artifacts: {
-        presentation: 'Open presentation',
-      },
-      images: {},
     },
     memori: {
       title: 'Memori',
@@ -217,7 +208,7 @@ export const contentEn = {
     lowPowerSystemDesign: {
       title: 'Low Power System Design: Thermal Sensor Station',
       description:
-        'Together with Manuel Reichegger, I developed a low-power temperature sensing station using an ESP32-C6, a 15 kΩ NTC thermistor, and the 12-bit ADC. The controller wakes from deep sleep every 30 seconds, keeps readings in RTC memory, and transmits ten measurements together over Wi-Fi.',
+        'Together with Manuel Reichegger, I developed a low-power temperature sensing station using an ESP32-C6, a 15 kΩ NTC thermistor, and the 12-bit ADC. The controller wakes from deep sleep every 30 seconds, stores readings in RTC memory, and sends batches of ten measurements to a base station over Wi-Fi. The goal was to minimise energy use so the station can operate reliably in hard-to-access locations with limited power.',
       artifacts: {
         proposal: 'Open proposal',
       },
@@ -239,7 +230,7 @@ export const contentEn = {
     franzFotoArchiv: {
       title: 'Franz Foto Archiv',
       description:
-        'A hosted photo archive web app with user accounts and a gallery workflow, built as a larger school project around organizing and browsing image collections.',
+        'A web archive for photographs taken by my great-grandfather Johann Niederkofler, one of the first photographers in the Ahrntal valley. Built as my final school project, it combines a React front end, Node.js back end, and MySQL database for managing descriptions of negative and slide photographs. Together with the St. Johann historical association, the digitised collection is intended to support genealogy, local and family history, education, and documentation of the valley’s cultural development.',
       images: {
         login: 'Franz Foto Archiv login screenshot',
         alternateLogin: 'Franz Foto Archiv alternate login screenshot',
@@ -254,12 +245,12 @@ export const contentEn = {
     fruitShop: {
       title: 'Fruit Shop',
       description:
-        'A small online shop prototype for browsing fruit and vegetable products, practicing classic shop pages, product presentation, and checkout-style flows.',
+        'A small online shop prototype for fruit and vegetable products, including standard shop pages, product presentation, a shopping cart, and checkout flows.',
       images: {
         home: 'Fruit Shop home page screenshot',
         products: 'Fruit Shop product listing screenshot',
         cart: 'Fruit Shop cart workflow screenshot',
-        checkout: 'Fruit Shop checkout-style page screenshot',
+        checkout: 'Fruit Shop checkout page screenshot',
       },
     },
     quisepp: {
