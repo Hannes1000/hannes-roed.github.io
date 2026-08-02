@@ -11,6 +11,7 @@ await cp(join(dist, 'assets'), join(repoRoot, 'assets'), { recursive: true });
 
 for (const file of [
   'favicon.svg',
+  'og.png',
   'og-image.svg',
   'cv-hannes-roed.pdf',
   'bachelor-thesis-hannes-roed.pdf',

@@ -7,6 +7,7 @@ import {
   Mail,
   MapPin,
   Menu,
+  Phone,
   X,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -34,6 +35,7 @@ type Project = {
 
 const assets = {
   portrait: new URL('../ressources/profile_picture.png', import.meta.url).href,
+  portraitBackground: new URL('../ressources/background_profile_image.jpg', import.meta.url).href,
   thesis: new URL(
     '../ressources/projects_bachelor/bachelor_thesis/1_sandbox_instruction.jpg',
     import.meta.url,
@@ -84,8 +86,8 @@ const assets = {
 const copy = {
   de: {
     nav: [
-      { label: 'Über mich', href: '#about' },
-      { label: 'Projekte', href: '#projects' },
+      { label: 'Start', href: '#top' },
+      { label: 'Portfolio-Projekte', href: '#projects' },
       { label: 'Werdegang', href: '#path' },
       { label: 'Kontakt', href: '#contact' },
     ],
@@ -101,7 +103,7 @@ const copy = {
     heroLineOne: 'Ich baue Software,',
     heroLineTwo: 'die man ausprobieren kann.',
     intro:
-      'Hallo, ich bin Hannes. Mich interessieren Systeme, bei denen Code mit der echten Welt zusammenkommt: Sprache, Sensoren, Robotik, Simulation und Mixed Reality.',
+      'Ich habe meinen Bachelor in Informatik an der Universität Innsbruck abgeschlossen und arbeite gerne an Software, die interaktiv, robust und technisch spannend ist. Meine Interessen umfassen künstliche Intelligenz, Spracherkennung, Machine Learning und Simulation. Ich mag es, komplexe Systeme in nutzbare Anwendungen zu verwandeln, zum Beispiel durch Sprachsteuerung in einer Unity-Sandbox, die Evaluation von ASR-Systemen oder die Umsetzung von Physik- und Simulationstechniken.',
     viewProjects: 'Meine Projekte',
     downloadCv: 'CV als PDF',
     portraitAlt: 'Porträt von Hannes Röd',
@@ -109,18 +111,8 @@ const copy = {
     availability: 'Woran ich gerade arbeite',
     availabilityText:
       'Spracherkennung in Echtzeit, energiesparende Sensorik und Simulationen, die sich nachvollziehbar verhalten.',
-    aboutEyebrow: 'Ein bisschen persönlicher',
-    aboutTitle: 'Neugierig genug, um nachzumessen.',
-    aboutBody:
-      'Ich komme aus Sand in Taufers und studiere Informatik in Innsbruck. Technik mochte ich schon früh – erst als Schüler an der TFO Brixen, später in Software-, Robotik- und Forschungsprojekten an der Universität. Am meisten Spaß machen mir Aufgaben, bei denen nicht nur ein Konzeptpapier entsteht, sondern etwas, das läuft, reagiert oder sich testen lässt.',
-    aboutSecond:
-      'Mein Weg war dabei bewusst praktisch: IT-Support, Softwareentwicklung, Fertigung und zuletzt das KundenCenter des Verkehrsverbunds Tirol. Das hat mir gezeigt, dass gute Technik nicht bei der Implementierung endet. Sie muss für die Menschen funktionieren, die sie tatsächlich benutzen.',
-    sideNote: 'Kurz gesagt:',
-    sideNoteText: 'Ich tüftle gern, arbeite verlässlich im Team und frage lieber einmal mehr nach dem Warum.',
-    toolkitTitle: 'Mein Werkzeugkasten',
-    toolkitIntro: 'Keine Prozentbalken – nur Dinge, mit denen ich tatsächlich gearbeitet habe.',
     projectsEyebrow: 'Ausgewählte Arbeiten',
-    projectsTitle: 'Projekte, an denen ich etwas gelernt habe.',
+    projectsTitle: 'Portfolio-Projekte',
     projectsIntro:
       'Statt alles aufzulisten, zeige ich hier die Arbeiten, die meine Interessen am besten verbinden: Interaktion, robuste Systeme und ein Ergebnis, das man sehen oder messen kann.',
     projectIndexLabel: 'Direkt zu einem Projekt springen',
@@ -137,6 +129,7 @@ const copy = {
     contactBody:
       'Wenn du an Software, Embedded Systems oder interaktiven Technologien arbeitest, freue ich mich über eine Nachricht.',
     mailMe: 'E-Mail schreiben',
+    phoneLabel: 'Telefon',
     github: 'GitHub ansehen',
     location: 'Innsbruck, Österreich',
     footer: 'Entworfen und gebaut von Hannes Röd.',
@@ -144,8 +137,8 @@ const copy = {
   },
   en: {
     nav: [
-      { label: 'About', href: '#about' },
-      { label: 'Projects', href: '#projects' },
+      { label: 'Home', href: '#top' },
+      { label: 'Portfolio projects', href: '#projects' },
       { label: 'Background', href: '#path' },
       { label: 'Contact', href: '#contact' },
     ],
@@ -161,7 +154,7 @@ const copy = {
     heroLineOne: 'I build software',
     heroLineTwo: 'you can actually try.',
     intro:
-      'Hi, I’m Hannes. I’m interested in systems where code meets the real world: speech, sensors, robotics, simulation, and mixed reality.',
+      'I completed my Bachelor’s degree in Computer Science at the University of Innsbruck and enjoy building software that is interactive, robust, and technically engaging. My interests include artificial intelligence, speech recognition, machine learning, and simulation. I like turning complex systems into usable applications—for example through voice control in a Unity sandbox, the evaluation of ASR systems, or the implementation of physics and simulation techniques.',
     viewProjects: 'My projects',
     downloadCv: 'CV as PDF',
     portraitAlt: 'Portrait of Hannes Röd',
@@ -169,18 +162,8 @@ const copy = {
     availability: 'What I am working on',
     availabilityText:
       'Real-time speech recognition, low-power sensing, and simulations whose behavior can be understood and tested.',
-    aboutEyebrow: 'A little more personal',
-    aboutTitle: 'Curious enough to measure twice.',
-    aboutBody:
-      'I grew up in Sand in Taufers and study Computer Science in Innsbruck. I have been drawn to technology for a long time—first at the technical high school in Brixen, then through software, robotics, and research projects at university. I most enjoy work that results in more than a concept: something that runs, reacts, or can be tested.',
-    aboutSecond:
-      'My path has stayed deliberately practical: IT support, software development, manufacturing, and most recently the customer centre at Verkehrsverbund Tirol. It taught me that good technology does not end with implementation. It has to work for the people who actually use it.',
-    sideNote: 'In short:',
-    sideNoteText: 'I like to tinker, I am dependable in a team, and I would rather ask why once more than once too little.',
-    toolkitTitle: 'My toolkit',
-    toolkitIntro: 'No percentage bars—just things I have actually worked with.',
     projectsEyebrow: 'Selected work',
-    projectsTitle: 'Projects that taught me something.',
+    projectsTitle: 'Portfolio projects',
     projectsIntro:
       'Rather than list everything, these are the projects that best connect my interests: interaction, robust systems, and results you can see or measure.',
     projectIndexLabel: 'Jump directly to a project',
@@ -197,6 +180,7 @@ const copy = {
     contactBody:
       'If you are working on software, embedded systems, or interactive technology, I would be happy to hear from you.',
     mailMe: 'Write an email',
+    phoneLabel: 'Phone',
     github: 'View GitHub',
     location: 'Innsbruck, Austria',
     footer: 'Designed and built by Hannes Röd.',
@@ -366,32 +350,57 @@ const projects: Project[] = [
 
 const experience = [
   {
-    period: '2025',
+    period: 'Sommer 2025',
     title: { de: 'KundenCenter · Praktikum', en: 'Customer centre · Internship' },
     place: 'Verkehrsverbund Tirol, Innsbruck',
+    description: {
+      de: 'Praktische Erfahrung im KundenCenter und Einblick in serviceorientierte Abläufe des öffentlichen Verkehrs.',
+      en: 'Practical experience in the customer centre and insight into service-oriented public transport operations.',
+    },
   },
   {
     period: '2021–23',
     title: { de: 'Produktion', en: 'Manufacturing' },
     place: 'GKN Driveline & GKN Sinter Metals',
+    description: {
+      de: 'Mitarbeit in der Produktion während mehrerer Sommer in Bruneck und Sand in Taufers.',
+      en: 'Manufacturing work during several summers in Bruneck and Sand in Taufers.',
+    },
   },
   {
     period: '2020',
     title: { de: 'Softwareentwicklung · Praktikum', en: 'Software development · Internship' },
     place: 'Engl GmbH, Sand in Taufers',
+    description: {
+      de: 'Erste praktische Berufserfahrung in der Softwareentwicklung im Januar und Sommer 2020.',
+      en: 'First professional software-development experience in January and summer 2020.',
+    },
   },
   {
     period: '2019',
     title: { de: 'IT-Support · Praktikum', en: 'IT support · Internship' },
     place: 'Zirkonzahn, Gais',
+    description: {
+      de: 'Unterstützung im IT-Support und Einblick in den technischen Unternehmensalltag.',
+      en: 'IT support work and insight into day-to-day technical operations.',
+    },
+  },
+  {
+    period: '2018',
+    title: { de: 'Fertigungshelfer · Praktikum', en: 'Manufacturing assistant · Internship' },
+    place: 'Elektrisola, Sand in Taufers',
+    description: {
+      de: 'Sommerpraktikum als Fertigungshelfer.',
+      en: 'Summer internship as a manufacturing assistant.',
+    },
   },
 ];
 
 const education = [
   {
-    period: 'seit 2021',
-    periodEn: 'since 2021',
-    title: { de: 'Informatik', en: 'Computer Science' },
+    period: '2021–24',
+    periodEn: '2021–24',
+    title: { de: 'Bachelorstudium Informatik', en: 'Bachelor’s degree in Computer Science' },
     place: 'Universität Innsbruck',
   },
   {
@@ -408,32 +417,19 @@ const education = [
   },
 ];
 
-const toolkit = [
-  {
-    label: { de: 'Code', en: 'Code' },
-    value: 'C / C++ · C# · Python · Java · TypeScript',
-  },
-  {
-    label: { de: 'Systeme', en: 'Systems' },
-    value: 'Unity · React · Spring Boot · SQL · ESP32-C6',
-  },
-  {
-    label: { de: 'Themen', en: 'Topics' },
-    value: 'Speech Recognition · Computer Vision · Robotik · MR · Simulation',
-  },
-];
-
 const structuredData = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Hannes Röd',
   url: 'https://hannes1000.github.io/hannes-roed.github.io/',
+  email: 'mailto:roedhannes@gmail.com',
+  telephone: '+393476452458',
   sameAs: ['https://github.com/Hannes1000'],
   homeLocation: {
     '@type': 'Place',
     name: 'Innsbruck, Austria',
   },
-  affiliation: {
+  alumniOf: {
     '@type': 'CollegeOrUniversity',
     name: 'Universität Innsbruck',
   },
@@ -460,6 +456,9 @@ function App() {
   const [language, setLanguage] = useState<Language>(getInitialLanguage);
   const [menuOpen, setMenuOpen] = useState(false);
   const text = copy[language];
+  const mailSubject =
+    language === 'de' ? 'Kontakt über deine Portfolio-Webseite' : 'Contact via your portfolio website';
+  const mailHref = `mailto:roedhannes@gmail.com?subject=${encodeURIComponent(mailSubject)}`;
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -554,7 +553,15 @@ function App() {
 
           <div className="portrait-wrap">
             <figure className="portrait-frame">
-              <img src={assets.portrait} alt={text.portraitAlt} />
+              <div className="portrait-scene">
+                <img
+                  className="portrait-background"
+                  src={assets.portraitBackground}
+                  alt=""
+                  aria-hidden="true"
+                />
+                <img className="portrait-photo" src={assets.portrait} alt={text.portraitAlt} />
+              </div>
               <figcaption>{text.portraitCaption}</figcaption>
             </figure>
             <aside className="current-note" aria-label={text.availability}>
@@ -562,36 +569,6 @@ function App() {
               <p>{text.availabilityText}</p>
             </aside>
           </div>
-        </section>
-
-        <section className="about section-wrap" id="about">
-          <div className="section-heading">
-            <p className="eyebrow">{text.aboutEyebrow}</p>
-            <h2>{text.aboutTitle}</h2>
-          </div>
-          <div className="about-copy">
-            <p>{text.aboutBody}</p>
-            <p>{text.aboutSecond}</p>
-          </div>
-          <aside className="margin-note">
-            <span>{text.sideNote}</span>
-            <p>{text.sideNoteText}</p>
-          </aside>
-        </section>
-
-        <section className="toolkit section-wrap" aria-labelledby="toolkit-title">
-          <div className="toolkit-heading">
-            <h2 id="toolkit-title">{text.toolkitTitle}</h2>
-            <p>{text.toolkitIntro}</p>
-          </div>
-          <dl>
-            {toolkit.map((item) => (
-              <div key={item.value}>
-                <dt>{item.label[language]}</dt>
-                <dd>{item.value}</dd>
-              </div>
-            ))}
-          </dl>
         </section>
 
         <section className="projects section-wrap" id="projects">
@@ -686,6 +663,7 @@ function App() {
                   period={item.period}
                   title={item.title[language]}
                   place={item.place}
+                  description={item.description[language]}
                 />
               ))}
             </Timeline>
@@ -715,9 +693,17 @@ function App() {
           <div className="contact-copy">
             <p>{text.contactBody}</p>
             <div className="contact-actions">
-              <a className="button button-light" href="mailto:roedhannes@gmail.com">
+              <a className="button button-light" href={mailHref}>
                 <Mail aria-hidden="true" />
                 {text.mailMe}
+              </a>
+              <a
+                className="button button-outline"
+                href="tel:+393476452458"
+                aria-label={`${text.phoneLabel}: +39 347 645 2458`}
+              >
+                <Phone aria-hidden="true" />
+                +39 347 645 2458
               </a>
               <a
                 className="button button-outline"
@@ -759,10 +745,12 @@ function TimelineItem({
   period,
   title,
   place,
+  description,
 }: {
   period: string;
   title: string;
   place: string;
+  description?: string;
 }) {
   return (
     <li>
@@ -770,6 +758,7 @@ function TimelineItem({
       <div>
         <strong>{title}</strong>
         <span>{place}</span>
+        {description && <p>{description}</p>}
       </div>
     </li>
   );
