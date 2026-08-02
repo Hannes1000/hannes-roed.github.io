@@ -390,7 +390,7 @@ export const contentDe = {
     image: 'Bild',
   },
   footer: {
-    builtWith: 'Gebaut mit React, TypeScript und Tailwind CSS.',
+    builtWith: 'Erstellt mit React, TypeScript und Tailwind CSS.',
   },
   structuredData: {
     jobTitle: 'Softwareentwickler',
