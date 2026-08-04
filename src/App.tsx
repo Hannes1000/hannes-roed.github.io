@@ -69,7 +69,7 @@ function App() {
         description: content.profile.intro,
         email: `mailto:${content.profile.email}`,
         telephone: '+393476452458',
-        url: 'https://hannes-roed.github.io/',
+        url: 'https://hannes1000.github.io/',
         sameAs: [contactLinks.find((link) => link.id === 'github')?.href, contactLinks.find((link) => link.id === 'linkedin')?.href].filter(Boolean),
         alumniOf: {
           '@type': 'CollegeOrUniversity',
